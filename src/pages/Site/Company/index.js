@@ -1,0 +1,5 @@
+import { MDM_SBD_A0101000000 } from "./MDM_SBD_A0101000000";
+
+export {
+  MDM_SBD_A0101000000
+}

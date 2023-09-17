@@ -1,0 +1,27 @@
+/** Contents Style **/
+.contents-section .contents {
+    padding: 30px 30px 20px 0;
+}
+.contents .page-header {
+    padding: 0 0;
+}
+.grid-container {
+    overflow: hidden;
+    overflow-y: auto;
+    height: calc(100vh - 280px);
+    border-radius: 12px;
+    padding: 40px;
+    background: #f7f7f7;
+ }
+
+.grid-section + .grid-section {
+    margin-top: 40px;
+}
+.grid-headline {
+    margin-bottom: 24px;
+}
+.grid-buttons {
+    margin-top: 20px;
+}
+.grid-buttons button,
+.grid-top-buttons button {margin-left: 8px}
