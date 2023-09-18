@@ -9,7 +9,7 @@
     display: flex;
     align-items: center;
     padding-bottom: 14px;
-    border-bottom:2px solid #fff;
+    border-bottom:2px solid #D9D9D9;
     margin-bottom: 30px;
 }
 
@@ -30,4 +30,129 @@
 
 .aside-scroll .search-box input[type=text]:focus {
     outline: none;
+}
+
+.aside-scroll .search-button {
+    padding:12px 20px;
+    border:2px solid #fff;
+    color:#fff;
+    background-color: transparent;
+    display: block;
+    margin:0 auto;
+    border-radius: 40px;
+    margin-top: 40px;
+    width: 100px;
+    font-weight: 700;
+    font-size:18px;
+}
+
+.aside-scroll .search-cate .sc-box {
+    margin-top: 25px;
+    color:#fff;
+    padding-left:24px;
+    box-sizing: border-box;
+}
+
+.aside-scroll .search-cate .sc-box:first-child {
+    margin-top: 0;
+}
+
+.aside-scroll .search-cate .sc-box .sc-tit {
+    font-size:16px;
+    font-weight: 500;
+    line-height:24px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.aside-scroll .search-cate .sc-box .sc-tit::after {
+    content:"·";
+    display: block;
+    position:absolute;
+    left:-12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: bold;
+}
+
+.aside-scroll .search-cate .sc-box .sc-cont {
+
+}
+
+.aside-scroll .search-cate .sc-box .sc-cont .sc-select {
+    width: 100%;
+    padding:0 20px;
+    height:40px;
+    border:1px solid #eee;
+    border-radius: 8px;
+    -o-appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><mask id="mask0_1284_6435" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20"><rect width="20" height="20" fill="%23D9D9D9"/></mask><g mask="url(%23mask0_1284_6435)"><path d="M10 12L6 8H14L10 12Z" fill="black"/></g></svg>');
+    background-repeat: no-repeat;
+    background-position: center right 20px;
+}
+
+.aside-scroll .search-cate .sc-box .sc-cont .sc-select:focus {
+    outline: none;
+}
+
+.aside-scroll .search-cate .sc-box .sc-cont .radio-box {
+    margin-left:18px;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.aside-scroll .search-cate .sc-box .sc-cont .radio-box:first-child {
+    margin-left: 0;
+}
+
+.aside-scroll .search-cate .sc-box .sc-cont .radio-box input[type=radio] {
+    width: 1px;
+    height: 1px;
+    position: absolute;    
+}
+
+.aside-scroll .search-cate .sc-box .sc-cont .radio-box .radio-icon {
+    width: 20px;
+    height: 20px;
+    border:2px solid #fff;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.aside-scroll .search-cate .sc-box .sc-cont .radio-box input[type=radio] + .radio-icon::after {
+    display: block;
+    content:"";
+    width: 0px;
+    height: 0px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    opacity:0;
+    transition: all 0.3s ease;
+}
+
+.aside-scroll .search-cate .sc-box .sc-cont .radio-box input[type=radio]:checked + .radio-icon {
+    opacity: 1;
+}
+
+.aside-scroll .search-cate .sc-box .sc-cont .radio-box input[type=radio]:checked + .radio-icon::after {
+    width: 8px;
+    height: 8px;
+    opacity: 1 ;   
+}
+
+.aside-scroll .search-cate .sc-box .sc-cont .radio-box .radio-tit {
+    font-size:16px;
+    margin-left: 5px;
 }

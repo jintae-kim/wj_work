@@ -16,6 +16,7 @@ const Aside = () => {
 
       <ASIDE_A0101000000 />
 
+      <button type="button" className="search-button">조회</button>
     </div>
   )
 }
