@@ -2,9 +2,20 @@
 .contents-section .contents {
     padding: 30px 30px 20px 0;
 }
+
 .contents .page-header {
     padding: 0 0;
+    align-items: center;
+    margin-bottom: 20px;
 }
+
+.contents .page-header > h2 {
+    font-size:30px;
+    font-weight: 700;
+    line-height:32px;
+    color:#000;
+}
+
 .grid-container {
     overflow: hidden;
     overflow-y: auto;
@@ -12,16 +23,47 @@
     border-radius: 12px;
     padding: 40px;
     background: #f7f7f7;
- }
+}
+
+.breadcrumb-wrap .breadcrumb {
+    margin-bottom: 0;
+    align-items: center;
+}
+
+.breadcrumb-wrap .breadcrumb .breadcrumb-item a , 
+.breadcrumb-wrap .breadcrumb .breadcrumb-item.active {
+    text-decoration: none;
+    font-size:14px;
+    font-weight: 500;
+    color:#aaa;
+}
+
+.breadcrumb-wrap .breadcrumb-item+.breadcrumb-item {
+    padding-left:0;
+}
+
+.breadcrumb-wrap .breadcrumb-item+.breadcrumb-item::before {
+    background-image:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M8 14L12 10L8 6" stroke="%23DDDDDD" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+    content:"";
+    padding-right:0;
+    width: 20px;
+    height: 20px;
+    float: none;
+    display: inline-block;
+    vertical-align: middle;
+}
 
 .grid-section + .grid-section {
     margin-top: 40px;
 }
+
 .grid-headline {
     margin-bottom: 24px;
 }
+
 .grid-buttons {
     margin-top: 20px;
 }
+
 .grid-buttons button,
 .grid-top-buttons button {margin-left: 8px}

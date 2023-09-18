@@ -7,7 +7,7 @@ const MDM_SBD_A0101000000 = () => {
     <div className="contents">
       <Stack direction="horizontal" className="page-header">
         <h2>Company</h2>
-        <Breadcrumb className="ms-auto">
+        <Breadcrumb className="ms-auto breadcrumb-wrap">
           <Breadcrumb.Item href="#">Home</Breadcrumb.Item>
           <Breadcrumb.Item href="#">
             SITE
