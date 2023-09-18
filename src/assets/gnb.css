@@ -8,6 +8,8 @@
 
 .gnb-headline .gnb-language {
     margin-right: 20px;
+    position: relative;
+    z-index: 99;
 }
 
 .gnb-headline .gnb-language .gl-box {    

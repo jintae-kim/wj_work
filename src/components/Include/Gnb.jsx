@@ -12,7 +12,7 @@ const Gnb = () => {
 
         <div className="ms-auto d-flex align-items-center">
 
-          <div className="gnb-language position-relative">
+          <div className="gnb-language">
 
             <div className="gl-box">
               <img src={`${process.env.PUBLIC_URL}/assets/lang-korea.png`} alt="korea" />
