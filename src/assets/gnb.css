@@ -3,27 +3,152 @@
     height: 55px;
     padding: 0 30px 0 40px;
 }
+
 .gnb-headline h1 {margin: 0 0}
+
+.gnb-headline .gnb-language {
+    margin-right: 20px;
+    position: relative;
+    z-index: 99;
+}
+
+.gnb-headline .gnb-language .gl-box {    
+    cursor: pointer;
+}
+
+.gnb-headline .gnb-language .gl-box img {
+    width: 24px;
+    border-radius: 50%;
+    margin-right: 12px;
+    box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.10);
+}
+
+.gnb-headline .gnb-language .gl-hover {
+    display: none;
+    position:absolute;
+    top:26px;
+    border: 1px solid #d5d5d5;
+    background: #fff;
+    box-shadow: 3px 5px 7px 0 rgba(0,0,0,.2);
+}
+
+.gnb-headline .gnb-language:hover .gl-hover {
+    display: block;
+}
+
+.gnb-headline .gnb-language .gl-box > svg {
+    transition: all 0.3s ease;
+}
+
+.gnb-headline .gnb-language:hover .gl-box > svg {
+    transform:rotate(180deg);
+}
+
+.gnb-headline .gnb-language .gl-hover .gl-lang {
+    padding:10px 20px;
+    cursor: pointer;
+}
+
+.gnb-headline .gnb-language .gl-hover .gl-lang img {
+    border-radius: 50%;
+    width: 24px;
+    box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.10);
+}
+
+.gnb-headline .gnb-language .gl-hover .gl-lang.active {
+    background-color:#0a7afa;
+}
+
+.gnb-headline .gnb-user {
+    display: flex;
+    align-items: center;
+    margin-top: 2px;
+}
+
+.gnb-headline .gnb-user .user-icon {
+    width: 24px;
+    border-radius: 50%;
+}
+
+.gnb-headline .gnb-user .user-name {    
+    font-size:12px;
+    color:#777;
+    font-weight:700;
+    margin: 0;
+    margin-left: 8px;
+}
+
+.gnb-headline .gnb-button {
+    cursor: pointer;
+    margin-left: 24px;
+}
+
 .main-navigation {
     height: 60px;
-    padding: 0 30px 20px 40px;
+    padding: 0 30px 0 40px;
 }
+
 .main-navigation .nav {
-    height: 32px;
+    
 }
-.main-navigation .nav .nav-item {
-    height: 32px;
+
+.main-navigation .nav .nav-item {    
+    padding-right: 30px;
+    padding-bottom: 20px;   
 }
-.main-navigation .nav .nav-item .nav-link {
-    margin-right: 30px;
+
+.main-navigation .nav .nav-item .nav-link {    
     padding: 0 0 0 0;
     line-height: 32px;
     font-size: 24px;
     font-weight: 700;
     color: #ddd;
 }
+
+.main-navigation .nav .nav-item:last-child {
+    padding-right: 0;
+}
+
 .main-navigation .nav .nav-item .nav-link.active,
 .main-navigation .nav .nav-item .nav-link:hover {
     color: #000000;
     border-bottom: 2px solid #000;
+}
+
+.main-navigation .nav .nav-item .sub-depth-nav {
+    display: none;
+    position: absolute;
+    width:calc(100vw - 24px);
+    background-color:#fff;
+    box-shadow: 0px 20px 30px 0px rgba(0, 0, 0, 0.15);
+    border-top:2px solid #159B97;
+    top:42px;
+    left:0;
+    padding: 40px 74px;
+    box-sizing: border-box;
+    z-index: 9;
+}
+
+.main-navigation .nav .nav-item:hover .sub-depth-nav {
+    display: block;
+}
+
+.main-navigation .nav .nav-item .sub-depth-nav .sub-depth2 {
+    
+}
+
+.main-navigation .nav .nav-item .sub-depth-nav .sub-depth2 .sd-tit {
+    font-size:20px;
+    color:#000;
+    font-weight: 700;
+    line-height:32px;
+    margin-bottom: 20px;
+}
+
+.main-navigation .nav .nav-item .sub-depth-nav .sub-depth2 .sub-link {
+    display: block;
+    font-size:16px;
+    line-height:30px;
+    color:#777;
+    text-decoration: none;
 }
