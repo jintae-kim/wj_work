@@ -4,3 +4,30 @@
     overflow-y: scroll;
     height: calc(100vh - 242px);
 }
+
+.aside-scroll .search-box {
+    display: flex;
+    align-items: center;
+    padding-bottom: 14px;
+    border-bottom:2px solid #fff;
+    margin-bottom: 30px;
+}
+
+.aside-scroll .search-box input[type=text] {
+    border:none;
+    background-color: transparent;
+    color:#fff;
+    font-size:16px;
+    font-weight: 600;
+    margin-left: 6px;
+}
+
+.aside-scroll .search-box input[type=text]::placeholder {
+    color:#fff;
+    font-size:20px;
+    font-weight: 700;
+}
+
+.aside-scroll .search-box input[type=text]:focus {
+    outline: none;
+}
