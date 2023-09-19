@@ -5,5 +5,5 @@ import { HistoryStack } from "./HistoryStack";
 export {
   Aside,
   Gnb,
-  HistoryStack
+  HistoryStack,
 }
