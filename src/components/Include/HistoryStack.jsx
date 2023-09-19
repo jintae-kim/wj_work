@@ -5,13 +5,44 @@ import "../../assets/history.css"
 
 const HistoryStack = () => {
   return (
+
     <Stack direction="horizontal" className="history-stack">
+
+      <div className="hs-prev hs-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+          <path d="M19 9.66663L12.3333 16.3333L19 23" stroke="#AAAAAA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+
       <ul>
-        <li>
-          <Link to="/">History1</Link>
+        <li className="hs-cont">
+          <Link to="/" className="hs-link">
+            History1            
+          </Link>   
+          <span className="hs-delete"></span>       
+        </li>
+        <li className="hs-cont">
+          <Link to="/" className="hs-link">
+            History2            
+          </Link>   
+          <span className="hs-delete"></span>       
+        </li>
+        <li className="hs-cont">
+          <Link to="/" className="hs-link">
+            History3            
+          </Link>
+          <span className="hs-delete"></span>
         </li>
       </ul>
+
+      <div className="hs-next hs-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+          <path d="M19 9.66663L12.3333 16.3333L19 23" stroke="#AAAAAA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+
     </Stack>
+
   )
 }
 
