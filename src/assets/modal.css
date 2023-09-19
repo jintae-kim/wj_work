@@ -1,0 +1,117 @@
+/** Modal **/
+.modal-saveCon {
+
+}
+
+.modal-saveCon .modal-dialog {
+    max-width: 1000px;    
+}
+
+.modal-saveCon .modal-dialog .modal-content {
+    padding: 40px;
+    box-sizing: border-box;
+    border-radius: 16px;
+}
+
+.modal-saveCon .modal-dialog .modal-header,
+.modal-saveCon .modal-dialog .modal-body,
+.modal-saveCon .modal-dialog .modal-footer {
+    padding: 0;
+    border:none;
+}
+
+.modal-saveCon .modal-dialog .modal-header {
+    margin-bottom: 12px;    
+}
+
+.modal-saveCon .modal-dialog .modal-header .modal-title {
+    display: flex;
+    align-items: center;
+}
+
+.modal-saveCon .modal-dialog .modal-header .modal-title .modal-tit {
+    font-size:24px;
+    line-height:36px;
+    color:#111;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.modal-saveCon .modal-dialog .modal-header .modal-title .modal-subtit {
+    margin-left: 16px;
+    padding-left: 16px;
+    font-size:24px;
+    color:#444;
+    font-weight: 500;
+    position: relative;
+}
+
+.modal-saveCon .modal-dialog .modal-header .modal-title .modal-subtit::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 1px;
+    height: 24px;
+    background-color: #ddd;   
+    left:0;
+    top:50%;
+    transform:translateY(-50%);
+}
+
+.modal-saveCon .modal-dialog .modal-body .mc-tit {
+    font-size:16px;
+    font-weight: 700;
+    line-height: 32px;
+    display: flex;
+    align-items: center;
+}
+
+.modal-saveCon .modal-dialog .modal-body .mc-tit .mct-icon {
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-image:url('/public/assets/bullet-icon.png') ;
+    background-size: cover;
+    display: block;
+    margin-right: 8px;
+}
+
+.modal-saveCon .modal-dialog .modal-body .grid-box {
+    width: 100%;
+    background-color: #ddd;
+    height: 234px;
+}
+
+.modal-saveCon .modal-dialog .modal-body .mc-ques {
+    margin-bottom: 0;
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 32px;
+    font-weight: 500;
+    color:#333;
+}
+
+.modal-saveCon .modal-dialog .modal-footer {
+    margin-top: 16px;
+    justify-content: center;
+}
+
+.modal-saveCon .modal-dialog .modal-footer .btn {
+    min-width: 100px;
+    padding:12px 20px;
+    box-sizing: border-box;
+    font-size:20px;
+    border-radius: 8px;
+    line-height: 24px;
+}
+
+.modal-saveCon .modal-dialog .modal-footer .btn.cancle-btn {
+    color:#000;
+    border:1px solid #DDD;
+    background-color:#fff;
+}
+
+.modal-saveCon .modal-dialog .modal-footer .btn.confirm-btn {
+    background-color: #159B97;
+    border-color: #159B97;
+}

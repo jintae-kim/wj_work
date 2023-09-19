@@ -14,6 +14,22 @@
     font-weight: 700;
     line-height:32px;
     color:#000;
+    margin-bottom: 0;
+    position: relative;
+    padding-left:30px;
+}
+
+.contents .page-header > h2::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M11.8182 0H20L8.18182 20H0L11.8182 0Z" fill="%236BD5DD"/></svg>');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    left:6px;
+    top:-4px;
 }
 
 .grid-container {
