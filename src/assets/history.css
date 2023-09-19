@@ -1,6 +1,51 @@
 /** History Stack **/
-.history-stack {
-    height: 48px;
+.history-stack {    
     border-top: 1px solid #eeeeee;
     background: #ffffff;
+    justify-content: space-between;
 }
+
+.history-stack .hs-btn {
+    width: 90px;
+    height: 44px;
+    line-height: 38px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.history-stack .hs-btn.hs-prev {
+    border-right:1px solid #eee;
+}
+
+.history-stack .hs-btn.hs-next svg {
+    transform: rotate(180deg);
+}
+
+.history-stack ul {    
+    width: calc(100%  - 180px);
+    margin: 0;
+    padding: 0;
+}
+
+.history-stack ul .hs-cont {
+    height: 44px;    
+    display: inline-flex;
+    align-items: center;
+    padding:0 24px;
+    border-right:1px solid #EEE;
+}
+
+.history-stack ul .hs-cont .hs-link {
+    text-decoration: none;
+    color:#aaa;
+    font-size:16px;
+}
+
+.history-stack ul .hs-cont .hs-delete {
+    background-image:url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="9.5" fill="white" stroke="%23EEEEEE"/><path d="M12.5 7.5L7.5 12.5" stroke="%23777777" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.5 7.5L12.5 12.5" stroke="%23777777" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>') ;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    margin-left: 8px;
+    cursor: pointer;
+} 
