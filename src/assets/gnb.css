@@ -83,8 +83,7 @@
     margin-left: 24px;
 }
 
-.main-navigation {
-    height: 60px;
+.main-navigation {    
     padding: 0 30px 0 40px;
 }
 
@@ -92,9 +91,8 @@
     
 }
 
-.main-navigation .nav .nav-item {    
-    padding-right: 30px;
-    padding-bottom: 20px;   
+.main-navigation .nav .nav-item {        
+    padding:6px 30px 20px 0;
 }
 
 .main-navigation .nav .nav-item .nav-link {    
@@ -122,7 +120,7 @@
     background-color:#fff;
     box-shadow: 0px 20px 30px 0px rgba(0, 0, 0, 0.15);
     border-top:2px solid #159B97;
-    top:42px;
+    top:48px;
     left:0;
     padding: 40px 74px;
     box-sizing: border-box;
