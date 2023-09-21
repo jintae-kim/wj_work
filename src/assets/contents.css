@@ -7,6 +7,9 @@
     padding: 0 0;
     align-items: center;
     margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .contents .page-header > h2 {
@@ -43,6 +46,8 @@
 
 .breadcrumb-wrap .breadcrumb {
     margin-bottom: 0;
+    align-items: center;
+    display: flex;
     align-items: center;
 }
 

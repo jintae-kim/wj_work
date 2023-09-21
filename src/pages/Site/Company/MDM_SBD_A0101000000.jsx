@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Breadcrumb, Stack, Button, Modal } from "react-bootstrap";
+import { Breadcrumb, Stack, Modal } from "react-bootstrap";
+import { Button } from "devextreme-react";
 import "../../../assets/contents.css"
 import "../../../assets/modal.css"
 
@@ -20,7 +21,7 @@ const MDM_SBD_A0101000000 = () => {
 
     <div className="contents">
 
-      <Stack direction="horizontal" className="page-header">
+      <div className="page-header">
         <h2>          
           Company
         </h2>
@@ -31,7 +32,7 @@ const MDM_SBD_A0101000000 = () => {
           </Breadcrumb.Item>
           <Breadcrumb.Item active>Company</Breadcrumb.Item>
         </Breadcrumb>
-      </Stack>
+      </div>
 
       <div className="grid-container">
 

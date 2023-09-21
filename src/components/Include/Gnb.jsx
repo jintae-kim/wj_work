@@ -6,11 +6,11 @@ import "../../assets/gnb.css"
 const Gnb = () => {
   return (
     <>
-      <Stack direction="horizontal" className="gnb-headline">
+      <div className="gnb-headline">
 
         <h1><img src={`${process.env.PUBLIC_URL}/assets/img-tkg-logo.png`} width="66" alt="TKG - Taekwang" /></h1>
 
-        <div className="ms-auto d-flex align-items-center">
+        <div className="gnb-line">
 
           <div className="gnb-language">
 
@@ -42,11 +42,12 @@ const Gnb = () => {
             <img src={`${process.env.PUBLIC_URL}/assets/gnb-btn.png`} alt="gnb-btn" width="36" />
           </div>
         </div>
-      </Stack>
+      </div>
 
-      <Stack direction="horizontal" className="main-navigation position-relative">
-        <Nav
+      <div className="main-navigation">
+        <div
           activeKey="/site"
+          className="nav"
         >
           <Nav.Item>
             <NavLink to="/site/company" className="nav-link">SITE</NavLink>
@@ -88,8 +89,8 @@ const Gnb = () => {
           <Nav.Item>
             <NavLink to="/governance" className="nav-link">Governance</NavLink>
           </Nav.Item>
-        </Nav>
-      </Stack>
+        </div>
+      </div>
     </>
   )
 }
