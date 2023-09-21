@@ -1,7 +1,7 @@
 /** Aside styles **/
 .aside-scroll {
     overflow: hidden;
-    overflow-y: scroll;
+    overflow-y: auto;
     height: calc(100vh - 242px);
 }
 
