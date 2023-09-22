@@ -4,8 +4,15 @@ import { ASIDE_A0101000000 } from "./AsideMenus";
 import { Button } from "devextreme-react";
 
 const Aside = () => {
+
+  const closeAside = () => {
+    document.querySelector('.split-container').style.cssText = '--react-split-min-primary: 10px; --react-split-min-secondary: calc(100% - 300px); --react-split-primary: 0px; --react-split-splitter: 5px';
+  }
+
   return (
-    <div className="aside-scroll">      
+    <div className="aside-scroll">
+
+        <span className="as-close" onClick={closeAside}>X</span>     
 
         <div className="search-box">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">

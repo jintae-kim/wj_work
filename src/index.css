@@ -36,16 +36,30 @@ ul, li, ol, li {list-style: none}
 
 .aside-section {
   overflow: hidden;
-  max-width: 300px;
-  min-width: 200px;
+  max-width: 300px;  
   width: 100%;
   height: calc(100vh - 183px);
   flex: 0 1 300px;
-  padding: 30px 30px 30px 30px;
   border-top-right-radius: 24px;
   /* background: linear-gradient(-45deg, rgba(5, 105, 122, 1), rgba(21, 155, 151, 1)); */  
   background: linear-gradient(135deg, #159B97 0%, #05697A 32.81%);
+  position: relative;
 }
+
+.aside-section::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 4px;
+  height: 36px;
+  background-image: url(/public/assets/icon_splitter.png);
+  background-size: 100%;
+  right: 3px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-repeat: no-repeat;
+}
+
 .contents-section {
   width: calc(100% - 30px);
   flex: 0 1 calc(100% - 330px);
@@ -60,4 +74,6 @@ ul, li, ol, li {list-style: none}
   margin-top: 20px;
   height: calc(100% - 20px);
   margin-left: -5px;
+  position: relative;
+  z-index: 99;
 }
