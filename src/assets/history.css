@@ -3,18 +3,24 @@
     border-top: 1px solid #eeeeee;
     background: #ffffff;
     justify-content: space-between;
+    display: flex;
+    align-items: center;
 }
 
 .history-stack .hs-btn {
     width: 90px;
     height: 44px;
-    line-height: 38px;
+    line-height: 42px;
     text-align: center;
     cursor: pointer;
 }
 
 .history-stack .hs-btn.hs-prev {
     border-right:1px solid #eee;
+}
+
+.history-stack .hs-btn svg {
+    vertical-align: middle;
 }
 
 .history-stack .hs-btn.hs-next svg {

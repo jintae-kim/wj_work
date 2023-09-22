@@ -2,6 +2,14 @@
 .gnb-headline {
     height: 55px;
     padding: 0 30px 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gnb-headline .gnb-line {
+    display: flex;
+    align-items: center;
 }
 
 .gnb-headline h1 {margin: 0 0}
@@ -21,6 +29,7 @@
     border-radius: 50%;
     margin-right: 12px;
     box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.10);
+    vertical-align: middle;
 }
 
 .gnb-headline .gnb-language .gl-hover {
@@ -38,6 +47,7 @@
 
 .gnb-headline .gnb-language .gl-box > svg {
     transition: all 0.3s ease;
+    vertical-align: middle;
 }
 
 .gnb-headline .gnb-language:hover .gl-box > svg {
@@ -53,6 +63,7 @@
     border-radius: 50%;
     width: 24px;
     box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.10);
+    vertical-align: middle;
 }
 
 .gnb-headline .gnb-language .gl-hover .gl-lang.active {
@@ -83,12 +94,17 @@
     margin-left: 24px;
 }
 
+.gnb-headline .gnb-button img {
+    vertical-align: middle;
+}
+
 .main-navigation {    
     padding: 0 30px 0 40px;
+    position: relative;
 }
 
 .main-navigation .nav {
-    
+    display: flex;
 }
 
 .main-navigation .nav .nav-item {        
@@ -102,6 +118,8 @@
     font-weight: 700;
     color: #ddd;
     border-bottom:2px solid transparent;
+    text-decoration: none;
+    transition: all 0.3s ease;
 }
 
 .main-navigation .nav .nav-item:last-child {

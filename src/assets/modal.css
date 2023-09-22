@@ -1,35 +1,31 @@
 /** Modal **/
-.modal-saveCon {
-
-}
-
-.modal-saveCon .modal-dialog {
-    max-width: 1000px;    
-}
-
-.modal-saveCon .modal-dialog .modal-content {
-    padding: 40px;
-    box-sizing: border-box;
-    border-radius: 16px;
-}
-
-.modal-saveCon .modal-dialog .modal-header,
-.modal-saveCon .modal-dialog .modal-body,
-.modal-saveCon .modal-dialog .modal-footer {
+.dx-popup-normal .modal-header,
+.dx-popup-normal .modal-body,
+.dx-popup-normal .modal-footer {
     padding: 0;
     border:none;
 }
 
-.modal-saveCon .modal-dialog .modal-header {
-    margin-bottom: 12px;    
+.dx-popup-wrapper .dx-popup-content {
+    padding:40px;
+    padding-top:0;
 }
 
-.modal-saveCon .modal-dialog .modal-header .modal-title {
+.dx-popup-wrapper > .dx-overlay-content .dx-popup-title {
+    border:none !important;
+}
+
+.dx-popup-normal .modal-header {
+    margin-bottom: 12px;    
+    display: flex;
+}
+
+.dx-popup-normal .modal-header {
     display: flex;
     align-items: center;
 }
 
-.modal-saveCon .modal-dialog .modal-header .modal-title .modal-tit {
+.dx-popup-normal .modal-header .modal-tit {
     font-size:24px;
     line-height:36px;
     color:#111;
@@ -37,7 +33,7 @@
     margin-bottom: 0;
 }
 
-.modal-saveCon .modal-dialog .modal-header .modal-title .modal-subtit {
+.dx-popup-normal .modal-header .modal-subtit {
     margin-left: 16px;
     padding-left: 16px;
     font-size:24px;
@@ -46,7 +42,7 @@
     position: relative;
 }
 
-.modal-saveCon .modal-dialog .modal-header .modal-title .modal-subtit::after {
+.dx-popup-normal .modal-header .modal-subtit::after {
     content: "";
     display: block;
     position: absolute;
@@ -58,7 +54,7 @@
     transform:translateY(-50%);
 }
 
-.modal-saveCon .modal-dialog .modal-body .mc-tit {
+.dx-popup-normal .modal-body .mc-tit {
     font-size:16px;
     font-weight: 700;
     line-height: 32px;
@@ -66,7 +62,7 @@
     align-items: center;
 }
 
-.modal-saveCon .modal-dialog .modal-body .mc-tit .mct-icon {
+.dx-popup-normal .modal-body .mc-tit .mct-icon {
     width: 16px;
     height: 16px;
     background-repeat: no-repeat;
@@ -76,13 +72,13 @@
     margin-right: 8px;
 }
 
-.modal-saveCon .modal-dialog .modal-body .grid-box {
+.dx-popup-normal .modal-body .grid-box {
     width: 100%;
     background-color: #ddd;
     height: 234px;
 }
 
-.modal-saveCon .modal-dialog .modal-body .mc-ques {
+.dx-popup-normal .modal-body .mc-ques {
     margin-bottom: 0;
     margin-top: 10px;
     font-size: 16px;
@@ -91,12 +87,17 @@
     color:#333;
 }
 
-.modal-saveCon .modal-dialog .modal-footer {
+.dx-popup-normal .modal-footer {
     margin-top: 16px;
     justify-content: center;
+    display: flex;
 }
 
-.modal-saveCon .modal-dialog .modal-footer .btn {
+.dx-popup-normal .modal-footer .dx-button {
+ margin:0 4px;   
+}
+
+.dx-popup-normal .modal-footer .dx-button .dx-button-content {
     min-width: 100px;
     padding:12px 20px;
     box-sizing: border-box;
@@ -105,13 +106,14 @@
     line-height: 24px;
 }
 
-.modal-saveCon .modal-dialog .modal-footer .btn.cancle-btn {
+.dx-popup-normal .modal-footer .dx-button.cancle-btn {
     color:#000;
     border:1px solid #DDD;
     background-color:#fff;
 }
 
-.modal-saveCon .modal-dialog .modal-footer .btn.confirm-btn {
+.dx-popup-normal .modal-footer .dx-button.confirm-btn {
     background-color: #159B97;
     border-color: #159B97;
+    color:#fff;
 }

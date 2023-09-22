@@ -29,9 +29,16 @@ ul, li, ol, li {list-style: none}
 .contents-wrapper {
   margin: 0 0;
 }
+
+.contents-wrapper > .react-split {
+  padding:0;
+}
+
 .aside-section {
   overflow: hidden;
-  width: 300px;
+  max-width: 300px;
+  min-width: 200px;
+  width: 100%;
   height: calc(100vh - 183px);
   flex: 0 1 300px;
   padding: 30px 30px 30px 30px;
@@ -40,8 +47,17 @@ ul, li, ol, li {list-style: none}
   background: linear-gradient(135deg, #159B97 0%, #05697A 32.81%);
 }
 .contents-section {
-  width: calc(100% - 330px);
+  width: calc(100% - 30px);
   flex: 0 1 calc(100% - 330px);
   margin-left: 30px;
   padding: 0 0;
+}
+
+.contents-wrapper > .react-split > .split-container.vertical > .splitter .default-splitter > .line {
+  margin:0;
+  width:5px;
+  background-color:#05697A;
+  margin-top: 20px;
+  height: calc(100% - 20px);
+  margin-left: -5px;
 }

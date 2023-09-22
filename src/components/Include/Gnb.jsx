@@ -1,16 +1,15 @@
 import React from "react";
-import { Stack, Row, Nav } from "react-bootstrap";
 import { NavLink } from "react-router-dom"
 import "../../assets/gnb.css"
 
 const Gnb = () => {
   return (
     <>
-      <Stack direction="horizontal" className="gnb-headline">
+      <div className="gnb-headline">
 
         <h1><img src={`${process.env.PUBLIC_URL}/assets/img-tkg-logo.png`} width="66" alt="TKG - Taekwang" /></h1>
 
-        <div className="ms-auto d-flex align-items-center">
+        <div className="gnb-line">
 
           <div className="gnb-language">
 
@@ -42,13 +41,14 @@ const Gnb = () => {
             <img src={`${process.env.PUBLIC_URL}/assets/gnb-btn.png`} alt="gnb-btn" width="36" />
           </div>
         </div>
-      </Stack>
+      </div>
 
-      <Stack direction="horizontal" className="main-navigation position-relative">
-        <Nav
+      <div className="main-navigation">
+        <div
           activeKey="/site"
+          className="nav"
         >
-          <Nav.Item>
+          <div className="nav-item">
             <NavLink to="/site/company" className="nav-link">SITE</NavLink>
             <div className="sub-depth-nav">
               <div className="sub-depth2">
@@ -61,8 +61,8 @@ const Gnb = () => {
                 <NavLink to="#" className="sub-link">GoLink 3</NavLink>
               </div>
             </div>
-          </Nav.Item>
-          <Nav.Item>
+          </div>
+          <div className="nav-item">
             <NavLink to="/model" className="nav-link">Model</NavLink>
             <div className="sub-depth-nav">
               <div className="sub-depth2">
@@ -75,21 +75,21 @@ const Gnb = () => {
                 <NavLink to="#" className="sub-link">GoLink 3</NavLink>
               </div>
             </div>
-          </Nav.Item>
-          <Nav.Item>
+          </div>
+          <div className="nav-item">
             <NavLink to="/reference" className="nav-link">Reference</NavLink>
-          </Nav.Item>
-          <Nav.Item>
+          </div>
+          <div className="nav-item">
             <NavLink to="/time" className="nav-link">Time</NavLink>
-          </Nav.Item>
-          <Nav.Item>
+          </div>
+          <div className="nav-item">
             <NavLink to="/partner" className="nav-link">Partner</NavLink>
-          </Nav.Item>
-          <Nav.Item>
+          </div>
+          <div className="nav-item">
             <NavLink to="/governance" className="nav-link">Governance</NavLink>
-          </Nav.Item>
-        </Nav>
-      </Stack>
+          </div>
+        </div>
+      </div>
     </>
   )
 }

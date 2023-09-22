@@ -7,6 +7,9 @@
     padding: 0 0;
     align-items: center;
     margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .contents .page-header > h2 {
@@ -41,24 +44,26 @@
     background: #f7f7f7;
 }
 
-.breadcrumb-wrap .breadcrumb {
+.breadcrumb {
     margin-bottom: 0;
+    align-items: center;
+    display: flex;
     align-items: center;
 }
 
-.breadcrumb-wrap .breadcrumb .breadcrumb-item a , 
-.breadcrumb-wrap .breadcrumb .breadcrumb-item.active {
+.breadcrumb .breadcrumb-item a , 
+.breadcrumb .breadcrumb-item.active {
     text-decoration: none;
     font-size:14px;
     font-weight: 500;
     color:#aaa;
 }
 
-.breadcrumb-wrap .breadcrumb-item+.breadcrumb-item {
+.breadcrumb-item+.breadcrumb-item {
     padding-left:0;
 }
 
-.breadcrumb-wrap .breadcrumb-item+.breadcrumb-item::before {
+.breadcrumb-item+.breadcrumb-item::before {
     background-image:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M8 14L12 10L8 6" stroke="%23DDDDDD" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>');
     content:"";
     padding-right:0;
@@ -75,11 +80,39 @@
 
 .grid-headline {
     margin-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .grid-buttons {
+    text-align: right;
     margin-top: 20px;
 }
 
-.grid-buttons button,
-.grid-top-buttons button {margin-left: 8px}
+.grid-buttons .dx-button,
+.grid-top-buttons .dx-button {margin-left: 8px}
+
+.grid-buttons .dx-button {
+    min-width: 80px;
+    background-color:#777;
+    color: #fff;
+    border:none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-size:16px;
+    font-weight: 500;
+}
+
+.grid-buttons .dx-button.confirm-button {
+    background-color:#159B97;
+}
+
+.grid-buttons .dx-button-mode-contained.dx-state-hover {
+    border:none;
+    background-color:#999;
+}
+
+.grid-buttons .confirm-button.dx-state-hover {
+    background-color:#107f7c;
+}
