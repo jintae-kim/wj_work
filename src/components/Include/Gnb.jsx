@@ -1,5 +1,5 @@
 import React from "react";
-import { Stack, Row, Nav } from "react-bootstrap";
+import { Nav } from "react-bootstrap";
 import { NavLink } from "react-router-dom"
 import "../../assets/gnb.css"
 
@@ -49,7 +49,7 @@ const Gnb = () => {
           activeKey="/site"
           className="nav"
         >
-          <Nav.Item>
+          <div className="nav-item">
             <NavLink to="/site/company" className="nav-link">SITE</NavLink>
             <div className="sub-depth-nav">
               <div className="sub-depth2">
@@ -62,8 +62,8 @@ const Gnb = () => {
                 <NavLink to="#" className="sub-link">GoLink 3</NavLink>
               </div>
             </div>
-          </Nav.Item>
-          <Nav.Item>
+          </div>
+          <div className="nav-item">
             <NavLink to="/model" className="nav-link">Model</NavLink>
             <div className="sub-depth-nav">
               <div className="sub-depth2">
@@ -76,19 +76,19 @@ const Gnb = () => {
                 <NavLink to="#" className="sub-link">GoLink 3</NavLink>
               </div>
             </div>
-          </Nav.Item>
-          <Nav.Item>
+          </div>
+          <div className="nav-item">
             <NavLink to="/reference" className="nav-link">Reference</NavLink>
-          </Nav.Item>
-          <Nav.Item>
+          </div>
+          <div className="nav-item">
             <NavLink to="/time" className="nav-link">Time</NavLink>
-          </Nav.Item>
-          <Nav.Item>
+          </div>
+          <div className="nav-item">
             <NavLink to="/partner" className="nav-link">Partner</NavLink>
-          </Nav.Item>
-          <Nav.Item>
+          </div>
+          <div className="nav-item">
             <NavLink to="/governance" className="nav-link">Governance</NavLink>
-          </Nav.Item>
+          </div>
         </div>
       </div>
     </>

@@ -44,26 +44,26 @@
     background: #f7f7f7;
 }
 
-.breadcrumb-wrap .breadcrumb {
+.breadcrumb {
     margin-bottom: 0;
     align-items: center;
     display: flex;
     align-items: center;
 }
 
-.breadcrumb-wrap .breadcrumb .breadcrumb-item a , 
-.breadcrumb-wrap .breadcrumb .breadcrumb-item.active {
+.breadcrumb .breadcrumb-item a , 
+.breadcrumb .breadcrumb-item.active {
     text-decoration: none;
     font-size:14px;
     font-weight: 500;
     color:#aaa;
 }
 
-.breadcrumb-wrap .breadcrumb-item+.breadcrumb-item {
+.breadcrumb-item+.breadcrumb-item {
     padding-left:0;
 }
 
-.breadcrumb-wrap .breadcrumb-item+.breadcrumb-item::before {
+.breadcrumb-item+.breadcrumb-item::before {
     background-image:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M8 14L12 10L8 6" stroke="%23DDDDDD" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>');
     content:"";
     padding-right:0;

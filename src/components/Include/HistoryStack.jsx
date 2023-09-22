@@ -6,7 +6,7 @@ import "../../assets/history.css"
 const HistoryStack = () => {
   return (
 
-    <Stack direction="horizontal" className="history-stack">
+    <div className="history-stack">
 
       <div className="hs-prev hs-btn">
         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
@@ -41,7 +41,7 @@ const HistoryStack = () => {
         </svg>
       </div>
 
-    </Stack>
+    </div>
 
   )
 }

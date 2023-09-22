@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Breadcrumb, Stack, Modal } from "react-bootstrap";
+import { Breadcrumb, Modal } from "react-bootstrap";
 import { Button } from "devextreme-react";
 import "../../../assets/contents.css"
 import "../../../assets/modal.css"
@@ -25,32 +25,41 @@ const MDM_SBD_A0101000000 = () => {
         <h2>          
           Company
         </h2>
-        <Breadcrumb className="ms-auto breadcrumb-wrap">
-          <Breadcrumb.Item href="#">Home</Breadcrumb.Item>
-          <Breadcrumb.Item href="#">
-            SITE
-          </Breadcrumb.Item>
-          <Breadcrumb.Item active>Company</Breadcrumb.Item>
-        </Breadcrumb>
+        
+        <ul className="ms-auto breadcrumb">
+          <li className="breadcrumb-item">
+            <a href="#">Home</a>
+          </li>
+          <li className="breadcrumb-item">
+            <a href="#">SITE</a>
+          </li>
+          <li className="breadcrumb-item active">
+            Company
+          </li>          
+        </ul>
       </div>
 
       <div className="grid-container">
 
         <div className="grid-section">
-          <Stack direction="horizontal" className="grid-headline">
+
+          <div className="grid-headline">
+
             <div className="result-info">
               <span className="title">Result</span>
               총 00개
             </div>
+
             <div className="grid-top-buttons ms-auto">
-              <Button variant="outline-secondary" size="sm">
+              <Button>
                 SQL Viewer
               </Button>
-              <Button variant="outline-secondary" size="sm">
+              <Button>
                 엑셀 다운로드
               </Button>
             </div>
-          </Stack>
+
+          </div>
 
           <div className="grid-area">
 
@@ -59,10 +68,10 @@ const MDM_SBD_A0101000000 = () => {
           </div>
 
           <div className="grid-buttons text-end">
-            <Button variant="secondary">등록</Button>
-            <Button variant="secondary">삭제</Button>
-            <Button variant="secondary" onClick={handleShow}>저장</Button>
-            <Button variant="primary" onClick={handleShow2}>확정</Button>
+            <Button>등록</Button>
+            <Button>삭제</Button>
+            <Button onClick={handleShow}>저장</Button>
+            <Button onClick={handleShow2}>확정</Button>
           </div>
 
         </div>
@@ -76,10 +85,10 @@ const MDM_SBD_A0101000000 = () => {
           </div>
 
           <div className="grid-buttons text-end">
-            <Button variant="secondary">등록</Button>
-            <Button variant="secondary">삭제</Button>
-            <Button variant="secondary" onClick={handleShow}>저장</Button>
-            <Button variant="primary" onClick={handleShow2}>확정</Button>
+            <Button>등록</Button>
+            <Button>삭제</Button>
+            <Button onClick={handleShow}>저장</Button>
+            <Button onClick={handleShow2}>확정</Button>
           </div>
         </div>
 
