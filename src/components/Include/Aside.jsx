@@ -1,6 +1,12 @@
 import React from "react";
 import "../../assets/aside.css";
-import { ASIDE_A0101000000 } from "./AsideMenus";
+import { 
+  ASIDE_A0101000000, 
+  ASIDE_A0105000000,
+  ASIDE_A0302000000, 
+  ASIDE_A0103000000, 
+  ASIDE_A0306010000 
+} from "./AsideMenus";
 import { Button } from "devextreme-react";
 
 const Aside = () => {
@@ -23,6 +29,14 @@ const Aside = () => {
         </div>
 
         <ASIDE_A0101000000 />
+
+        {/* <ASIDE_A0105000000 />
+
+        <ASIDE_A0302000000 />
+
+        <ASIDE_A0306010000 />
+
+        <ASIDE_A0103000000 /> */}
 
         <Button type="button" className="search-button" text="조회"></Button>          
       

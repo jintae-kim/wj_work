@@ -77,6 +77,10 @@
     border-color: #fff;
 }
 
+.aside-scroll .search-cate {
+    margin-bottom: 25px;
+}
+
 .aside-scroll .search-cate .sc-box {
     margin-top: 25px;
     color:#fff;
@@ -108,6 +112,11 @@
 
 .aside-scroll .search-cate .sc-box .sc-cont {
 
+}
+
+.aside-scroll .search-cate .sc-box .sc-cont .dx-field-value {
+    float: none;
+    width: 100%;
 }
 
 .aside-scroll .search-cate .sc-box .sc-cont .sc-select {
