@@ -64,7 +64,7 @@
 }
 
 .breadcrumb-item+.breadcrumb-item::before {
-    background-image:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M8 14L12 10L8 6" stroke="%23DDDDDD" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+    background-image:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M8 14L12 10L8 6" stroke="%23DDDDDD" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/></svg>');
     content:"";
     padding-right:0;
     width: 20px;

@@ -17,7 +17,7 @@ const Gnb = () => {
               <img src={`${process.env.PUBLIC_URL}/assets/lang-korea.png`} alt="korea" />
 
               <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
-                <path d="M5.5293 6.66675L8.86263 10.1667L12.196 6.66675" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M5.5293 6.66675L8.86263 10.1667L12.196 6.66675" stroke="black" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </div>
             
@@ -45,7 +45,7 @@ const Gnb = () => {
 
       <div className="main-navigation">
         <div
-          activeKey="/site"
+          activekey="/site"
           className="nav"
         >
           <div className="nav-item">

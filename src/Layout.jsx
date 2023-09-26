@@ -8,7 +8,7 @@ import { Split } from "@geoffcox/react-splitter";
 
 const LayoutProvider = () => {
   return (
-    <div fluid className="container-wrapper">
+    <div className="container-wrapper">
 
       <Gnb />
 
