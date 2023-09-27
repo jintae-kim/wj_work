@@ -40,7 +40,6 @@
     overflow: hidden;
     overflow-y: auto;
     height: calc(100vh - 280px);
-    border-radius: 12px;
 }
 
 .breadcrumb {

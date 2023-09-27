@@ -13,10 +13,14 @@
     position: absolute;
     display: block;
     right:12px;
-    top:12px;
+    top:10px;
     cursor: pointer;
     color: #fff;
     font-weight: bold;
+}
+
+.aside-scroll .as-close svg {
+    vertical-align: middle;
 }
 
 .aside-scroll .search-box {
