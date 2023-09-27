@@ -19,20 +19,21 @@
     color:#000;
     margin-bottom: 0;
     position: relative;
-    padding-left:30px;
+    display: flex;
+    align-items: center;
 }
 
-.contents .page-header > h2::before {
-    content: "";
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M11.8182 0H20L8.18182 20H0L11.8182 0Z" fill="%236BD5DD"/></svg>');
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: absolute;
-    left:6px;
-    top:-4px;
+.contents .page-header > h2 .favorite-icon {
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.contents .page-header > h2 .favorite-icon svg path {
+    transition: all 0.3s ease;
+}
+
+.contents .page-header > h2 .favorite-icon .active path {
+    fill: #FDE932;
 }
 
 .grid-container {
@@ -40,8 +41,6 @@
     overflow-y: auto;
     height: calc(100vh - 280px);
     border-radius: 12px;
-    padding: 40px;
-    background: #f7f7f7;
 }
 
 .breadcrumb {
@@ -83,6 +82,32 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.grid-headline .tit-icon {
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIXSURBVHgB5ZdJS1xBFIVPB6IkYLJONAkSk6yzcEAE24WCiqg/Sjf6A1zpwuEPCOLKAcFxIy5EaUWhFUFBcABtBdtzeVVaSlW/uroSD3x08ahz6756t4YG3rsygWe1pJn8JhWkQPJkhcyQ60C8z6TN+L+TMnJGcmSWrCNFP8kSKZbgiPR4vPLsJMW7QH6FBs9EDG6RGfnreKvJVaR3Gf6ZR31kAMug4+1Xehus8YMTpAU6uf2z0CkLTwI10Mnt/wc61fgS+AKdZHXYb/kVOlX4EihAJ+lfNO0b6FTwJXAAnfJO+xA6HfgSWIVObv816LTieyi7WNpG4tLueDsUvmPyCQF1k8uIIEMe71CE78KMUVLfSB/ZQFJcYrxD8s3HSFMJb6PpkzeeoomxYWJWPjdkUFoZ5/cOOtn6sm//diS72gCSKj9FMoXy7TbJCGkN+GSWpBhHyTaSWhKvFPYikvOiGimSI1XO+rRiGvYMPhzhk9i9ocFlGR5HBLF0OF7NMjwxY3nfvqhgwvGOK70Ps+DuhPXQqe4V3lpfAlXQqfIV3ipfAuXQyfaXAiyDTuW+BM6hk+1vt9iXeJ8ksAudck57BzrlfAnMQqe5QDtGwbHkyhyzjGRDeX4nLER65eofPIN+kOmUAHuk0+OV+8F+infajPGgUCb/SRf5h8cKlyN2nkyR24DvI5JdMYvHpSbnwRaZRMRfs/eneze6GZebHkguAAAAAElFTkSuQmCC');
+    background-size: cover;
+    display: block;
+    margin-right: 4px;
+}
+
+.grid-headline .result-info {
+    display: flex;
+    align-items: center;
+}
+
+.grid-headline .title {
+    font-weight: 700;
+    font-size:20px;
+    margin-right: 8px;
+}
+
+.grid-headline .count {
+    display: inline-block;
+    margin-top:3px;
 }
 
 .grid-buttons {
