@@ -8,6 +8,7 @@ import {
   ASIDE_A0306010000 
 } from "./AsideMenus";
 import { Button } from "devextreme-react";
+import { ReactComponent as Close } from "../../image/close.svg"
 
 const Aside = () => {
 
@@ -18,7 +19,9 @@ const Aside = () => {
   return (
     <div className="aside-scroll">
 
-        <span className="as-close" onClick={closeAside}>X</span>     
+        <span className="as-close" onClick={closeAside}>
+          <Close/>
+        </span>     
 
         <div className="search-box">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
