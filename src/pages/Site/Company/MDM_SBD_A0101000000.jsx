@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Button, Popup } from "devextreme-react";
+import { ReactComponent as Favorite } from "../../../image/favorite.svg";
 import "../../../assets/contents.css"
 import "../../../assets/modal.css"
 
@@ -17,6 +18,12 @@ const MDM_SBD_A0101000000 = () => {
   const togglePopup2 = () => {
       setPopupVisibility2(!isPopupVisible2);
   };
+
+  const [isActive, setActive] = useState(false);
+
+  const toggleFavorite = () => {
+    setActive(!isActive);
+  }
   
 
   return (
@@ -24,7 +31,10 @@ const MDM_SBD_A0101000000 = () => {
     <div className="contents">
 
       <div className="page-header">
-        <h2>          
+        <h2 className="ph-tit">          
+          <span className="favorite-icon">
+            <Favorite width={24} height={24} className={isActive ? "active" : "inactive"} onClick={toggleFavorite}/>
+          </span>
           Company
         </h2>
 
@@ -48,8 +58,9 @@ const MDM_SBD_A0101000000 = () => {
           <div className="grid-headline">
 
             <div className="result-info">
+              <span className="tit-icon"></span>
               <span className="title">Result</span>
-              총 00개
+              <span className="count">총 00개</span>
             </div>
 
             <div className="grid-top-buttons">
