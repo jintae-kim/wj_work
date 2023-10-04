@@ -1,8 +1,11 @@
 import React from "react";
-import { NavLink } from "react-router-dom"
-import "../../assets/gnb.css"
+import { NavLink } from "react-router-dom";
+import "../../assets/gnb.css";
+import { MainNavItems } from "../Resources/MainNavItems";
 
 const Gnb = () => {
+  const navItems = MainNavItems;
+
   return (
     <>
       <div className="gnb-headline">
@@ -45,7 +48,6 @@ const Gnb = () => {
 
       <div className="main-navigation">
         <div
-          activekey="/site"
           className="nav"
         >
           <div className="nav-item">

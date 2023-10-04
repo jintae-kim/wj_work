@@ -41,9 +41,6 @@ const MDM_SBD_A0101000000 = () => {
 
         <ul className="breadcrumb">
           <li className="breadcrumb-item">
-            <Link to="/">Home</Link>
-          </li>
-          <li className="breadcrumb-item">
             <Link to="/site">SITE</Link>
           </li>
           <li className="breadcrumb-item active">
