@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Button, Popup } from "devextreme-react";
+import { Link } from "react-router-dom";
 import { ReactComponent as Favorite } from "../../../image/favorite.svg";
 import "../../../assets/contents.css"
 import "../../../assets/modal.css"
@@ -40,14 +41,14 @@ const MDM_SBD_A0101000000 = () => {
 
         <ul className="breadcrumb">
           <li className="breadcrumb-item">
-            <a href="#">Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li className="breadcrumb-item">
-            <a href="#">SITE</a>
+            <Link to="/site">SITE</Link>
           </li>
           <li className="breadcrumb-item active">
             Company
-          </li>          
+          </li>
         </ul>
       </div>
 
