@@ -10,10 +10,10 @@ const AppRoutes = () => {
       path: "/",
       element: <LayoutProvider />,
       children: [
-        { path: "/", element: <Main title="Main" />},
-        { path: "/site/company", element: <MDM_SBD_A0101000000 title="Company" />},
-        { path: "/site", element: <MDM_SBD_A0101000000 title="Company" />},
-        { path: "*",  element: <Notfound title="Notfound" />}
+        { path: "/", element: <Main title="Main" /> },
+        { path: "/site", element: <MDM_SBD_A0101000000 title="Company" /> },
+        { path: "/site/company", element: <MDM_SBD_A0101000000 title="Company" /> },
+        { path: "*",  element: <Notfound title="Notfound" /> }
       ]
     }
   ]);

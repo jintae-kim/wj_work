@@ -6,27 +6,32 @@ const MainNavItems = [
       {
         title: "Company",
         path: "/site/company",
-        child_depth: []
+        child_depth: [
+          {
+            title: "Depth3",
+            path: ""
+          }
+        ]
       },
       {
         title: "Factory",
         path: "/site/factory",
-        child_depth: []
+        child_depth: [],
       },
       {
         title: "plant",
         path: "/site/plant",
-        child_depth: []
+        child_depth: [],
       },
       {
         title: "Operation",
         path: "/site/operation",
-        child_depth: []
+        child_depth: [],
       },
       {
         title: "Line",
         path: "/site/line",
-        child_depth: []
+        child_depth: [],
       },
     ]
   },
@@ -37,7 +42,7 @@ const MainNavItems = [
       {
         title: "Model",
         path: "/model/model",
-        child_depth: []
+        child_depth: [],
       },
       {
         title: "Product",
@@ -68,6 +73,26 @@ const MainNavItems = [
         ]
       },
     ]
+  },
+  {
+    title: "Reference",
+    path: "",
+    child_depth: [],
+  },
+  {
+    title: "Time",
+    path: "",
+    child_depth: [],
+  },
+  {
+    title: "Partner",
+    path: "",
+    child_depth: [],
+  },
+  {
+    title: "Governance",
+    path: "",
+    child_depth: [],
   },
 ]
 

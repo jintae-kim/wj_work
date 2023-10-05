@@ -20,7 +20,7 @@
     z-index: 99;
 }
 
-.gnb-headline .gnb-language .gl-box {    
+.gnb-headline .gnb-language .gl-box {
     cursor: pointer;
 }
 
@@ -28,7 +28,7 @@
     width: 24px;
     border-radius: 50%;
     margin-right: 12px;
-    box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.10);
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.10);
     vertical-align: middle;
 }
 
@@ -62,7 +62,7 @@
 .gnb-headline .gnb-language .gl-hover .gl-lang img {
     border-radius: 50%;
     width: 24px;
-    box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.10);
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.10);
     vertical-align: middle;
 }
 
@@ -81,7 +81,7 @@
     border-radius: 50%;
 }
 
-.gnb-headline .gnb-user .user-name {    
+.gnb-headline .gnb-user .user-name {
     font-size:12px;
     color:#777;
     font-weight:700;
@@ -98,7 +98,7 @@
     vertical-align: middle;
 }
 
-.main-navigation {    
+.main-navigation {
     padding: 0 30px 0 40px;
     position: relative;
 }
@@ -107,11 +107,11 @@
     display: flex;
 }
 
-.main-navigation .nav .nav-item {        
+.main-navigation .nav .nav-item {
     padding:6px 30px 20px 0;
 }
 
-.main-navigation .nav .nav-item .nav-link {    
+.main-navigation .nav .nav-item .nav-link {
     padding: 0 0 0 0;
     line-height: 32px;
     font-size: 24px;
@@ -137,35 +137,50 @@
     position: absolute;
     width:calc(100vw - 24px);
     background-color:#fff;
-    box-shadow: 0px 20px 30px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.15);
     border-top:2px solid #159B97;
     top:48px;
     left:0;
-    padding: 40px 74px;
+    padding: 40px 40px 40px 118px;
     box-sizing: border-box;
     z-index: 9;
 }
 
 .main-navigation .nav .nav-item:hover .sub-depth-nav {
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .main-navigation .nav .nav-item .sub-depth-nav .sub-depth2 {
-    
+    flex: 0 1 190px;
+    width: 190px;
+    margin-left: 20px;
+}
+.main-navigation .nav .nav-item .sub-depth-nav .sub-depth2:first-child {
+    margin-left: 0;
 }
 
-.main-navigation .nav .nav-item .sub-depth-nav .sub-depth2 .sd-tit {
+.main-navigation .nav .nav-item .sub-depth-nav .sub-depth2 .sd-tit,
+.main-navigation .nav .nav-item .sub-depth-nav .sub-depth2 .sd-tit a {
     font-size:20px;
     color:#000;
     font-weight: 700;
     line-height:32px;
-    margin-bottom: 20px;
+    text-decoration: none;
+}
+.main-navigation .nav .nav-item .sub-depth-nav .sub-depth2 .sd-tit,
+.main-navigation .nav .nav-item .sub-depth-nav .sub-depth2 .sub-depth3 {
+    padding-left: 18px;
+    border-left: 1px solid #dddddd;
+}
+.main-navigation .nav .nav-item .sub-depth-nav .sub-depth2 .sub-depth3 {
+    padding-top: 20px;
 }
 
 .main-navigation .nav .nav-item .sub-depth-nav .sub-depth2 .sub-link {
     display: block;
     font-size:16px;
-    line-height:30px;
+    line-height:32px;
     color:#777;
     text-decoration: none;
 }

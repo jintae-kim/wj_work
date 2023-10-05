@@ -50,46 +50,33 @@ const Gnb = () => {
         <div
           className="nav"
         >
-          <div className="nav-item">
-            <NavLink to="/site/company" className="nav-link">SITE</NavLink>
-            <div className="sub-depth-nav">
-              <div className="sub-depth2">
-                <h5 className="sd-tit">
-                  Menu 1
-                </h5>
 
-                <NavLink to="#" className="sub-link">GoLink 1</NavLink>
-                <NavLink to="#" className="sub-link">GoLink 2</NavLink>
-                <NavLink to="#" className="sub-link">GoLink 3</NavLink>
-              </div>
-            </div>
-          </div>
-          <div className="nav-item">
-            <NavLink to="/model" className="nav-link">Model</NavLink>
-            <div className="sub-depth-nav">
-              <div className="sub-depth2">
-                <h5 className="sd-tit">
-                  Menu 2
-                </h5>
+          {navItems && navItems.map((firstDepth, index) => (
+            <div className="nav-item" key={`depth1-${index}`}>
+              <NavLink to={firstDepth.path} className="nav-link">{firstDepth.title}</NavLink>
+                <div className="sub-depth-nav">
+                  {firstDepth.child_depth && firstDepth.child_depth.map((secondDepth, index) => (
+                    <div className="sub-depth2" key={`depth2-${index}`}>
+                      <h5 className="sd-tit">
+                        <NavLink to={secondDepth.path}>{secondDepth.title}</NavLink>
+                      </h5>
 
-                <NavLink to="#" className="sub-link">GoLink 1</NavLink>
-                <NavLink to="#" className="sub-link">GoLink 2</NavLink>
-                <NavLink to="#" className="sub-link">GoLink 3</NavLink>
-              </div>
+                      {secondDepth.child_depth.length !== 0
+                        ?
+                        <ul className="sub-depth3">
+                          {secondDepth.child_depth && secondDepth.child_depth.map((thirdDepth, index) => (
+                            <li key={`depth3-${index}`}>
+                              <NavLink to={thirdDepth.path} className="sub-link">{thirdDepth.title}</NavLink>
+                            </li>
+                          ))}
+                        </ul>
+                        : null
+                      }
+                    </div>
+                  ))}
+                </div>
             </div>
-          </div>
-          <div className="nav-item">
-            <NavLink to="/reference" className="nav-link">Reference</NavLink>
-          </div>
-          <div className="nav-item">
-            <NavLink to="/time" className="nav-link">Time</NavLink>
-          </div>
-          <div className="nav-item">
-            <NavLink to="/partner" className="nav-link">Partner</NavLink>
-          </div>
-          <div className="nav-item">
-            <NavLink to="/governance" className="nav-link">Governance</NavLink>
-          </div>
+          ))}
         </div>
       </div>
     </>
