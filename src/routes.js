@@ -12,7 +12,7 @@ const AppRoutes = () => {
       children: [
         { path: "/", element: <Main title="Main" /> },
         { path: "/site", element: <MDM_SBD_A0101000000 title="Company" /> },
-        { path: "/site/company", element: <MDM_SBD_A0101000000 title="Company" /> },
+        { path: "/site/MDM_PRG_A0101000000", element: <MDM_SBD_A0101000000 title="Company" /> },
         { path: "*",  element: <Notfound title="Notfound" /> }
       ]
     }

@@ -1,11 +1,11 @@
 const MainNavItems = [
   {
     title: "SITE",
-    path: "/site/company",
+    path: "/site",
     child_depth: [
       {
         title: "Company",
-        path: "/site/company",
+        path: "/site/MDM_PRG_A0101000000",
         child_depth: []
       },
       {
@@ -32,7 +32,7 @@ const MainNavItems = [
   },
   {
     title: "Model",
-    path: "/model/model",
+    path: "/model",
     child_depth: [
       {
         title: "Model",
@@ -71,7 +71,7 @@ const MainNavItems = [
   },
   {
     title: "Reference",
-    path: "/reference/part",
+    path: "/reference",
     child_depth: [
       {
         title: "Part",
@@ -139,7 +139,7 @@ const MainNavItems = [
   },
   {
     title: "Time",
-    path: "",
+    path: "/time",
     child_depth: [
       {
         title: "Date",
@@ -180,7 +180,7 @@ const MainNavItems = [
   },
   {
     title: "Partner",
-    path: "",
+    path: "/partner",
     child_depth: [
       {
         title: "Destination",
@@ -196,7 +196,7 @@ const MainNavItems = [
   },
   {
     title: "Governance",
-    path: "",
+    path: "/governance",
     child_depth: [
       {
         title: "Data Catalog",

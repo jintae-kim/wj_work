@@ -1,8 +1,29 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import "../../assets/history.css"
+import {Link, NavLink} from "react-router-dom";
+import "../../assets/history.css";
 
 const HistoryStack = () => {
+  const historyStackData = [
+    {
+      title: "Company",
+      path: "/site/MDM_PRG_A0101000000"
+    },
+    {
+      title: "Mold Change Time",
+      path: ""
+    },
+    {
+      title: "Data Interface Report",
+      path: ""
+    },
+    {
+      title: "Part",
+      path: ""
+    },
+  ];
+
+
+
   return (
 
     <div className="history-stack">
@@ -14,24 +35,14 @@ const HistoryStack = () => {
       </div>
 
       <ul>
-        <li className="hs-cont">
-          <Link to="/" className="hs-link">
-            History1            
-          </Link>   
-          <span className="hs-delete"></span>       
-        </li>
-        <li className="hs-cont">
-          <Link to="/" className="hs-link">
-            History2            
-          </Link>   
-          <span className="hs-delete"></span>       
-        </li>
-        <li className="hs-cont">
-          <Link to="/" className="hs-link">
-            History3            
-          </Link>
-          <span className="hs-delete"></span>
-        </li>
+        {historyStackData && historyStackData.map((stack, index) => (
+          <li className="hs-cont" key={index}>
+            <NavLink to={stack.path} className="hs-link">
+              {stack.title}
+            </NavLink>
+            <span className="hs-delete"></span>
+          </li>
+        ))}
       </ul>
 
       <div className="hs-next hs-btn">
