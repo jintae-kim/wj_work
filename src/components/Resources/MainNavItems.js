@@ -6,12 +6,7 @@ const MainNavItems = [
       {
         title: "Company",
         path: "/site/company",
-        child_depth: [
-          {
-            title: "Depth3",
-            path: ""
-          }
-        ]
+        child_depth: []
       },
       {
         title: "Factory",
@@ -76,23 +71,159 @@ const MainNavItems = [
   },
   {
     title: "Reference",
-    path: "",
-    child_depth: [],
+    path: "/reference/part",
+    child_depth: [
+      {
+        title: "Part",
+        path: "/reference/part",
+        child_depth: [],
+      },
+      {
+        title: "Size",
+        path: "/reference/size",
+        child_depth: [],
+      },
+      {
+        title: "Gender",
+        path: "/reference/gender",
+        child_depth: [],
+      },
+      {
+        title: "UOM",
+        path: "/reference/uom",
+        child_depth: [],
+      },
+      {
+        title: "Color",
+        path: "/reference/color",
+        child_depth: [],
+      },
+      {
+        title: "Defect",
+        path: "/reference/defect/code",
+        child_depth: [
+          {
+            title: "불량코드",
+            path: "/reference/defect/code"
+          },
+          {
+            title: "불량코드그룹",
+            path: "/reference/defect/code-group"
+          },
+        ],
+      },
+      {
+        title: "MCS",
+        path: "/reference/mcs",
+        child_depth: [],
+      },
+      {
+        title: "Last",
+        path: "/reference/last",
+        child_depth: [
+          {
+            title: "전사관리",
+            path: "/reference/last/manage-global"
+          },
+          {
+            title: "법인관리",
+            path: "/reference/last/manage-company"
+          },
+          {
+            title: "모델관리",
+            path: "/reference/last/manage-model"
+          },
+        ],
+      },
+    ],
   },
   {
     title: "Time",
     path: "",
-    child_depth: [],
+    child_depth: [
+      {
+        title: "Date",
+        path: "",
+        child_depth: [],
+      },
+      {
+        title: "Week",
+        path: "",
+        child_depth: [],
+      },
+      {
+        title: "Site Calendar",
+        path: "",
+        child_depth: [],
+      },
+      {
+        title: "Line Calendar",
+        path: "",
+        child_depth: [],
+      },
+      {
+        title: "Shift",
+        path: "",
+        child_depth: [],
+      },
+      {
+        title: "Mold Change Time",
+        path: "",
+        child_depth: [],
+      },
+      {
+        title: "FGCT",
+        path: "",
+        child_depth: [],
+      },
+    ],
   },
   {
     title: "Partner",
     path: "",
-    child_depth: [],
+    child_depth: [
+      {
+        title: "Destination",
+        path: "",
+        child_depth: [],
+      },
+      {
+        title: "Vendor",
+        path: "",
+        child_depth: [],
+      },
+    ],
   },
   {
     title: "Governance",
     path: "",
-    child_depth: [],
+    child_depth: [
+      {
+        title: "Data Catalog",
+        path: "",
+        child_depth: [],
+      },
+      {
+        title: "Master Data",
+        path: "",
+        child_depth: [],
+      },
+      {
+        title: "Data Interface Report",
+        path: "",
+        child_depth: [],
+      },
+      {
+        title: "Rule",
+        path: "",
+        child_depth: [],
+      },
+      {
+        title: "Validation Check Result",
+        path: "",
+        child_depth: [],
+      },
+    ],
   },
 ]
 

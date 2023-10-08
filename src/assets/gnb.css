@@ -154,10 +154,8 @@
 .main-navigation .nav .nav-item .sub-depth-nav .sub-depth2 {
     flex: 0 1 190px;
     width: 190px;
-    margin-left: 20px;
-}
-.main-navigation .nav .nav-item .sub-depth-nav .sub-depth2:first-child {
-    margin-left: 0;
+    margin-right: 20px;
+    margin-bottom: 20px;
 }
 
 .main-navigation .nav .nav-item .sub-depth-nav .sub-depth2 .sd-tit,
