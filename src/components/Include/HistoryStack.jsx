@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {Link, NavLink} from "react-router-dom";
 import "../../assets/history.css";
 
 const HistoryStack = () => {
+
   const historyStackData = [
     {
       title: "Company",
@@ -22,7 +23,9 @@ const HistoryStack = () => {
     },
   ];
 
-
+  const hisdelete = (e) => {
+    e.target.parentNode.remove();
+  }
 
   return (
 
@@ -40,7 +43,7 @@ const HistoryStack = () => {
             <NavLink to={stack.path} className="hs-link">
               {stack.title}
             </NavLink>
-            <span className="hs-delete"></span>
+            <span className="hs-delete" onClick={e => hisdelete(e)}></span>
           </li>
         ))}
       </ul>
