@@ -1,6 +1,10 @@
-import React, { useEffect } from "react";
+import React from "react";
 import {Link, NavLink} from "react-router-dom";
+import { Navigation } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import "../../assets/history.css";
+import 'swiper/css';
+import 'swiper/css/navigation';
 
 const HistoryStack = () => {
 
@@ -21,38 +25,59 @@ const HistoryStack = () => {
       title: "Part",
       path: ""
     },
+    {
+      title: "Part2",
+      path: ""
+    },
+    {
+      title: "Part3",
+      path: ""
+    },
+    {
+      title: "Part4",
+      path: ""
+    },
+    {
+      title: "Part5",
+      path: ""
+    },
+    {
+      title: "Part6",
+      path: ""
+    },
+    {
+      title: "Part7",
+      path: ""
+    },
+
   ];
 
   const hisdelete = (e) => {
     e.target.parentNode.remove();
   }
 
+  const navigationPrevRef = React.useRef(null)
+  const navigationNextRef = React.useRef(null)
+
   return (
 
     <div className="history-stack">
 
-      <div className="hs-prev hs-btn">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-          <path d="M19 9.66663L12.3333 16.3333L19 23" stroke="#AAAAAA" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
-        </svg>
-      </div>
-
-      <ul>
+      <Swiper
+        navigation
+        modules={[Navigation]}
+        slidesPerView={"auto"}
+        className="history-swiper"
+      >
         {historyStackData && historyStackData.map((stack, index) => (
-          <li className="hs-cont" key={index}>
+          <SwiperSlide className="hs-cont" key={index}>
             <NavLink to={stack.path} className="hs-link">
               {stack.title}
             </NavLink>
             <span className="hs-delete" onClick={e => hisdelete(e)}></span>
-          </li>
+          </SwiperSlide>
         ))}
-      </ul>
-
-      <div className="hs-next hs-btn">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-          <path d="M19 9.66663L12.3333 16.3333L19 23" stroke="#AAAAAA" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
-        </svg>
-      </div>
+      </Swiper>
 
     </div>
 
