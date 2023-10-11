@@ -14,7 +14,13 @@ const LayoutProvider = () => {
 
       <div className="contents-wrapper">
 
-        <Split initialPrimarySize='300px' minPrimarySize='10px' minSecondarySize='calc(100% - 300px)' splitterSize='5px' vertical>
+        <Split 
+          initialPrimarySize='300px' 
+          minPrimarySize='10px' 
+          minSecondarySize='calc(100% - 300px)' 
+          splitterSize='5px' 
+          vertical
+        >
           <div className="aside-section">
             <Aside />
           </div>
