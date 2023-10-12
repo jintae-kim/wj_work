@@ -34,7 +34,7 @@ const Aside = () => {
   }
 
   const closeAside = () => {
-    document.querySelector('.split-container').style.cssText = '--react-split-min-primary: 10px; --react-split-min-secondary: calc(100% - 300px); --react-split-primary: 0px; --react-split-splitter: 5px';
+    document.querySelector('.aside-section').classList.add('hide');
   }
 
   return (
