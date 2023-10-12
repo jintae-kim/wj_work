@@ -10,6 +10,7 @@ import {
   ASIDE_A0203000000,
   ASIDE_A0201000000,
   ASIDE_A0202000000,
+  ASIDE_A0308010000,
 
 } from "./AsideMenus";
 import { ReactComponent as Close } from "../../image/close.svg";
@@ -28,7 +29,7 @@ const Aside = () => {
     case isLocation.pathname.includes("/MDM_PRG_A0101000000"):
       leftPanel = <ASIDE_A0101000000 />;
       break;
-    default: leftPanel = <ASIDE_A0202000000 />;
+    default: leftPanel = <ASIDE_A0308010000 />;
       break;
   }
 
