@@ -2,7 +2,7 @@
 .aside-scroll {
     overflow: hidden;
     overflow-y: auto;
-    height: calc(100vh - 183px);
+    height: calc(100vh - 160px);
     position: relative;
     width: 100%;
     min-width: 200px;
@@ -79,6 +79,10 @@
 .aside-scroll .search-button.dx-state-hover {
     background:none;
     border-color: #fff;
+}
+
+.aside-scroll .search-button.dx-state-focused {
+    background:none;
 }
 
 .aside-scroll .search-cate {
