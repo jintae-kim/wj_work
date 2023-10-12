@@ -49,7 +49,7 @@ ul, li, ol, li {list-style: none}
 .aside-section::after {
   position: absolute;
   content: "";
-  display: none;
+  display: block;
   width: 4px;
   height: 36px;
   background-image: url(/public/assets/icon_splitter.png);

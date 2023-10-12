@@ -5,6 +5,7 @@ import 'devextreme/dist/css/dx.light.css'
 import 'devextreme/dist/css/dx.common.css'
 import { Outlet } from "react-router-dom";
 import { ReactComponent as Open } from "./image/aside_open.svg";
+import { Split } from "@geoffcox/react-splitter";
 
 
 const LayoutProvider = () => {
@@ -20,17 +21,15 @@ const LayoutProvider = () => {
 
       <div className="contents-wrapper">
 
-        <div className="aside-section">
-          <Aside />
-
-          <span className="as-open" onClick={openAside}>
-            <Open/>
-          </span>
-        </div>
-        
-        <div className="contents-section">
-          <Outlet />
-        </div>
+        <Split initialPrimarySize='300px' minPrimarySize='10px' minSecondarySize='calc(100% - 300px)' splitterSize='5px' vertical>
+          <div className="aside-section">
+            <Aside />
+          </div>
+          
+          <div className="contents-section">
+            <Outlet />
+          </div>
+        </Split>
 
       </div>
 
