@@ -34,7 +34,7 @@ ul, li, ol, li {list-style: none}
   overflow: hidden;
   max-width: 300px;  
   width: 100%;
-  height: calc(100vh - 160px);
+  height: calc(100vh - 162px);
   flex: 0 1 300px;
   border-top-right-radius: 24px;
   /* background: linear-gradient(-45deg, rgba(5, 105, 122, 1), rgba(21, 155, 151, 1)); */  

@@ -108,7 +108,7 @@
 }
 
 .main-navigation .nav .nav-item {
-    padding: 6px 0 20px 0;
+    padding: 5px 0 24px 0;
 }
 
 .main-navigation .nav .nav-item .nav-link {
@@ -122,6 +122,10 @@
     border-bottom:2px solid transparent;
     text-decoration: none;
     transition: all 0.3s ease;
+}
+
+.main-navigation .nav .nav-item .nav-link:first-child {
+    margin-left: 14px;
 }
 
 .main-navigation .nav .nav-item:last-child {
