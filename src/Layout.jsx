@@ -4,9 +4,15 @@ import Box, { Item } from 'devextreme-react/box';
 import 'devextreme/dist/css/dx.light.css'
 import 'devextreme/dist/css/dx.common.css'
 import { Outlet } from "react-router-dom";
-import { Split } from "@geoffcox/react-splitter";
+import { ReactComponent as Open } from "./image/aside_open.svg";
+
 
 const LayoutProvider = () => {
+
+  const openAside = () => {
+    document.querySelector('.aside-section').classList.remove('hide');
+  }
+
   return (
     <div className="container-wrapper">
 
@@ -14,21 +20,17 @@ const LayoutProvider = () => {
 
       <div className="contents-wrapper">
 
-        <Split 
-          initialPrimarySize='300px' 
-          minPrimarySize='10px' 
-          minSecondarySize='calc(100% - 300px)' 
-          splitterSize='5px' 
-          vertical
-        >
-          <div className="aside-section">
-            <Aside />
-          </div>
-          
-          <div className="contents-section">
-            <Outlet />
-          </div>
-        </Split>
+        <div className="aside-section">
+          <Aside />
+
+          <span className="as-open" onClick={openAside}>
+            <Open/>
+          </span>
+        </div>
+        
+        <div className="contents-section">
+          <Outlet />
+        </div>
 
       </div>
 

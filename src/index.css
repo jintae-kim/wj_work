@@ -22,8 +22,10 @@ ul, li, ol, li {list-style: none}
   padding: 0;  
   overflow: hidden;  
 }
+
 .contents-wrapper {
   margin: 0 0;
+  display: flex;
 }
 
 .contents-wrapper > .react-split {
@@ -40,12 +42,14 @@ ul, li, ol, li {list-style: none}
   /* background: linear-gradient(-45deg, rgba(5, 105, 122, 1), rgba(21, 155, 151, 1)); */  
   background: linear-gradient(135deg, #159B97 0%, #05697A 32.81%);
   position: relative;
+  flex-basis: auto;
+  transition: all 0.5s ease;
 }
 
 .aside-section::after {
   position: absolute;
   content: "";
-  display: block;
+  display: none;
   width: 4px;
   height: 36px;
   background-image: url(/public/assets/icon_splitter.png);
@@ -56,11 +60,29 @@ ul, li, ol, li {list-style: none}
   background-repeat: no-repeat;
 }
 
+.aside-section.hide {
+  width: 0;
+}
+
+.aside-section .as-open {
+  position: fixed;
+  top: 118px;
+  left: -30px;
+  z-index: -1;
+  cursor: pointer;
+  transition: all 1s ease;
+}
+
+.aside-section.hide .as-open {
+  left:0;
+  z-index: 1;
+}
+
 .contents-section {
   width: calc(100% - 30px);
-  flex: 0 1 calc(100% - 330px);
   margin-left: 30px;
   padding: 0 0;
+  flex-basis: auto;
 }
 
 .contents-wrapper > .react-split > .split-container.vertical > .splitter .default-splitter > .line {
