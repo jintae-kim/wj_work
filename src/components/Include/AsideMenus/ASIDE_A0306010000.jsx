@@ -30,17 +30,7 @@ export const ASIDE_A0306010000 = () => {
 
             <div className="sc-box">
                 <h5 className="sc-tit">
-                    Defct Group Name
-                </h5>
-
-                <div className="sc-cont">
-                    <TextBox inputAttr="" className="dx-field-value" defaultValue="" />
-                </div>
-            </div>
-
-            <div className="sc-box">
-                <h5 className="sc-tit">
-                    Defact Type
+                    Defect Type
                 </h5>
 
                 <div className="sc-cont">
