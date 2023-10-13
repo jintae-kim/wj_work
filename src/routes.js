@@ -2,8 +2,8 @@ import React from "react";
 import { useRoutes } from "react-router-dom";
 import { Main, Notfound } from "./pages";
 import {
-  MDM_SBD_A0101000000,
-  MDM_SBD_A0105000000
+  MDM_PRG_A0101000000,
+  MDM_PRG_A0105000000
 } from "./pages/Site";
 import LayoutProvider from "./Layout"
 
@@ -14,11 +14,11 @@ const AppRoutes = () => {
       element: <LayoutProvider />,
       children: [
         { path: "/", element: <Main title="Main" /> },
-        { path: "/site", element: <MDM_SBD_A0101000000 title="Company" /> },
+        { path: "/site", element: <MDM_PRG_A0101000000 title="Company" /> },
         {
           path: "/site/MDM_PRG_A0101000000",
           element:
-            <MDM_SBD_A0101000000
+            <MDM_PRG_A0101000000
               title="Company"
               firstDepth="SITE"
               secondDepth="Company"
@@ -28,7 +28,7 @@ const AppRoutes = () => {
         {
           path: "/site/MDM_PRG_A0105000000",
           element:
-            <MDM_SBD_A0105000000
+            <MDM_PRG_A0105000000
               title="Line"
               firstDepth="SITE"
               secondDepth="Line"

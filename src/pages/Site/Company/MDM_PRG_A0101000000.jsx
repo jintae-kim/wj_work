@@ -6,7 +6,7 @@ import "../../../assets/contents.css"
 import "../../../assets/modal.css"
 
 
-const MDM_SBD_A0101000000 = () => {
+const MDM_PRG_A0101000000 = () => {
 
   const [isPopupVisible, setPopupVisibility] = useState(false);
  
@@ -176,4 +176,4 @@ const MDM_SBD_A0101000000 = () => {
     </div>
   )
 }
-export {MDM_SBD_A0101000000};
+export {MDM_PRG_A0101000000};

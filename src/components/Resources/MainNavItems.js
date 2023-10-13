@@ -25,7 +25,7 @@ const MainNavItems = [
       },
       {
         title: "Line",
-        path: "/site/line",
+        path: "/site/MDM_PRG_A0105000000",
         child_depth: [],
       },
     ]

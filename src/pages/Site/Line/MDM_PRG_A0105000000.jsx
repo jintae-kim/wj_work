@@ -5,7 +5,7 @@ import { ReactComponent as Favorite } from "../../../image/favorite.svg";
 import "../../../assets/contents.css"
 import "../../../assets/modal.css"
 
-const MDM_SBD_A0105000000 = (props) => {
+const MDM_PRG_A0105000000 = (props) => {
   const [isPopupVisible, setPopupVisibility] = useState(false);
 
   const togglePopup = () => {
@@ -174,4 +174,4 @@ const MDM_SBD_A0105000000 = (props) => {
     </div>
   )
 }
-export {MDM_SBD_A0105000000};
+export {MDM_PRG_A0105000000};
