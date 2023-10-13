@@ -50,11 +50,11 @@ ul, li, ol, li {list-style: none}
   position: absolute;
   content: "";
   display: block;
-  width: 4px;
-  height: 36px;
+  width: 6px;
+  height: 14px;
   background-image: url(/public/assets/icon_splitter.png);
   background-size: 100%;
-  right: 3px;
+  right: 5px;
   top: 50%;
   transform: translateY(-50%);
   background-repeat: no-repeat;
