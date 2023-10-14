@@ -1,23 +1,21 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import { Button, Popup } from "devextreme-react";
 import { Link } from "react-router-dom";
 import { ReactComponent as Favorite } from "../../../image/favorite.svg";
 import "../../../assets/contents.css"
 import "../../../assets/modal.css"
 
-
-const MDM_SBD_A0101000000 = () => {
-
+const MDM_PRG_A0204010000 = (props) => {
   const [isPopupVisible, setPopupVisibility] = useState(false);
- 
+
   const togglePopup = () => {
-      setPopupVisibility(!isPopupVisible);      
+    setPopupVisibility(!isPopupVisible);
   };
 
   const [isPopupVisible2, setPopupVisibility2] = useState(false);
- 
+
   const togglePopup2 = () => {
-      setPopupVisibility2(!isPopupVisible2);
+    setPopupVisibility2(!isPopupVisible2);
   };
 
   const [isActive, setActive] = useState(false);
@@ -25,26 +23,26 @@ const MDM_SBD_A0101000000 = () => {
   const toggleFavorite = () => {
     setActive(!isActive);
   }
-  
+
 
   return (
 
     <div className="contents">
 
       <div className="page-header">
-        <h2 className="ph-tit">          
+        <h2 className="ph-tit">
           <span className="favorite-icon">
             <Favorite width={24} height={24} className={isActive ? "active" : "inactive"} onClick={toggleFavorite}/>
           </span>
-          Company
+          {props.title}
         </h2>
 
         <ul className="breadcrumb">
           <li className="breadcrumb-item">
-            <Link to="/site">SITE</Link>
+            <Link to={props.firstDepthPath}>{props.firstDepth}</Link>
           </li>
           <li className="breadcrumb-item active">
-            Company
+            {props.secondDepth}
           </li>
         </ul>
       </div>
@@ -107,15 +105,15 @@ const MDM_SBD_A0101000000 = () => {
 
 
       {/* //-- 저장 모달 */}
-      <Popup         
-        visible={isPopupVisible} 
-        hideOnOutsideClick={true} 
-        onHiding={togglePopup}       
+      <Popup
+        visible={isPopupVisible}
+        hideOnOutsideClick={true}
+        onHiding={togglePopup}
         width={1000}
         height={500}
         dragEnabled={false}
         shadingColor="rgba(0, 0, 0, 0.5)"
-      >        
+      >
         <div className="modal-header">
           <h3 className="modal-tit">저장</h3>
           <span className="modal-subtit">Company</span>
@@ -133,23 +131,23 @@ const MDM_SBD_A0101000000 = () => {
 
         <div className="modal-footer">
           <Button className="cancle-btn" onClick={togglePopup}>취소</Button>
-          <Button className="confirm-btn" onClick={togglePopup}>확인</Button>    
+          <Button className="confirm-btn" onClick={togglePopup}>확인</Button>
         </div>
-            
+
       </Popup>
       {/* 저장 모달 --// */}
-      
+
 
       {/* //-- 확정 모달 */}
-      <Popup         
-        visible={isPopupVisible2} 
-        hideOnOutsideClick={true} 
-        onHiding={togglePopup2} 
+      <Popup
+        visible={isPopupVisible2}
+        hideOnOutsideClick={true}
+        onHiding={togglePopup2}
         width={1000}
         height={500}
         dragEnabled={false}
-        shadingColor="rgba(0, 0, 0, 0.5)"        
-      >        
+        shadingColor="rgba(0, 0, 0, 0.5)"
+      >
         <div className="modal-header">
           <h3 className="modal-tit">확정</h3>
           <span className="modal-subtit">Company</span>
@@ -167,13 +165,13 @@ const MDM_SBD_A0101000000 = () => {
 
         <div className="modal-footer">
           <Button className="cancle-btn" onClick={togglePopup2}>취소</Button>
-          <Button className="confirm-btn" onClick={togglePopup2}>확인</Button>        
+          <Button className="confirm-btn" onClick={togglePopup2}>확인</Button>
         </div>
-        
+
       </Popup>
       {/* 확정 모달 --// */}
 
     </div>
   )
 }
-export {MDM_SBD_A0101000000};
+export {MDM_PRG_A0204010000};

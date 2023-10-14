@@ -29,6 +29,33 @@ const Aside = () => {
     case isLocation.pathname.includes("/MDM_PRG_A0101000000"):
       leftPanel = <ASIDE_A0101000000 />;
       break;
+    case isLocation.pathname.includes("/MDM_PRG_A0105000000"):
+      leftPanel = <ASIDE_A0105000000 />;
+      break;
+    case isLocation.pathname.includes("/MDM_PRG_A0302000000"):
+      leftPanel = <ASIDE_A0302000000 />;
+      break;
+    case isLocation.pathname.includes("/MDM_PRG_A0103000000"):
+      leftPanel = <ASIDE_A0103000000 />;
+      break;
+    case isLocation.pathname.includes("/MDM_PRG_A0306010000"):
+      leftPanel = <ASIDE_A0306010000 />;
+      break;
+    case isLocation.pathname.includes("/MDM_PRG_A0204010000"):
+      leftPanel = <ASIDE_A0204010000 />;
+      break;
+    case isLocation.pathname.includes("/MDM_PRG_A0203000000"):
+      leftPanel = <ASIDE_A0203000000 />;
+      break;
+    case isLocation.pathname.includes("/MDM_PRG_A0201000000"):
+      leftPanel = <ASIDE_A0201000000 />;
+      break;
+    case isLocation.pathname.includes("/MDM_PRG_A0202000000"):
+      leftPanel = <ASIDE_A0202000000 />;
+      break;
+    case isLocation.pathname.includes("/MDM_PRG_A0308010000"):
+      leftPanel = <ASIDE_A0308010000 />;
+      break;
     default:
       break;
   }

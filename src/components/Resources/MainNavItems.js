@@ -25,7 +25,7 @@ const MainNavItems = [
       },
       {
         title: "Line",
-        path: "/site/line",
+        path: "/site/MDM_PRG_A0105000000",
         child_depth: [],
       },
     ]
@@ -36,26 +36,26 @@ const MainNavItems = [
     child_depth: [
       {
         title: "Model",
-        path: "/model/model",
+        path: "/model/MDM_PRG_A0201000000",
         child_depth: [],
       },
       {
         title: "Product",
-        path: "/model/product",
+        path: "/model/MDM_PRG_A0202000000",
         child_depth: []
       },
       {
         title: "Tact Time",
-        path: "/model/tac-time",
+        path: "/model/MDM_PRG_A0203000000",
         child_depth: []
       },
       {
         title: "BOM",
-        path: "/model/bom",
+        path: "/model/MDM_PRG_A0204010000",
         child_depth: [
           {
             title: "BOM",
-            path: "/model/bom/bom"
+            path: "/model/MDM_PRG_A0204010000"
           },
           {
             title: "BOM Structure",
@@ -80,7 +80,7 @@ const MainNavItems = [
       },
       {
         title: "Size",
-        path: "/reference/size",
+        path: "/reference/MDM_PRG_A0302000000",
         child_depth: [],
       },
       {
@@ -100,11 +100,11 @@ const MainNavItems = [
       },
       {
         title: "Defect",
-        path: "/reference/defect/code",
+        path: "/reference/MDM_PRG_A0306010000",
         child_depth: [
           {
             title: "불량코드",
-            path: "/reference/defect/code"
+            path: "/reference/MDM_PRG_A0306010000"
           },
           {
             title: "불량코드그룹",
@@ -119,11 +119,11 @@ const MainNavItems = [
       },
       {
         title: "Last",
-        path: "/reference/last",
+        path: "/reference/MDM_PRG_A0308010000",
         child_depth: [
           {
             title: "전사관리",
-            path: "/reference/last/manage-global"
+            path: "/reference/MDM_PRG_A0308010000"
           },
           {
             title: "법인관리",
