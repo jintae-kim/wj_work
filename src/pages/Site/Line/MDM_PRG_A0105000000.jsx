@@ -1,11 +1,38 @@
-import React, {useState} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import { Button, Popup } from "devextreme-react";
 import { Link } from "react-router-dom";
 import { ReactComponent as Favorite } from "../../../image/favorite.svg";
-import "../../../assets/contents.css"
-import "../../../assets/modal.css"
+import "../../../assets/contents.css";
+import "../../../assets/modal.css";
+import { GridView, LocalDataProvider } from "realgrid";
+import { columns, fields, rows } from "../../../RealgridData/realgridData";
+import "realgrid/dist/realgrid-style.css";
 
 const MDM_PRG_A0105000000 = (props) => {
+  const [dataProvider, setDataProvider] = useState(null);
+  const [gridView, setGridView] = useState(null);
+  const realgridElement = useRef(null);
+
+  useEffect(() => {
+    const container = realgridElement.current;
+    const dp = new LocalDataProvider(true);
+    const gv = new GridView(container);
+
+    gv.setDataSource(dp);
+    dp.setFields(fields);
+    gv.setColumns(columns);
+    dp.setRows(rows);
+
+    setDataProvider(dp);
+    setGridView(gv);
+
+    return () => {
+      dp.clearRows();
+      gv.destroy();
+      dp.destroy();
+    }
+  }, []);
+
   const [isPopupVisible, setPopupVisibility] = useState(false);
 
   const togglePopup = () => {
@@ -72,7 +99,11 @@ const MDM_PRG_A0105000000 = (props) => {
 
           <div className="grid-area">
 
-            <div style={{ height: "600px", background: "#ddd" }}>그리드 영역</div>
+            <div
+              style={{ height: "500px", background: "#ddd" }}
+              ref={realgridElement}
+            >
+            </div>
 
           </div>
 
@@ -83,22 +114,6 @@ const MDM_PRG_A0105000000 = (props) => {
             <Button className="confirm-button" onClick={togglePopup2}>확정</Button>
           </div>
 
-        </div>
-
-        <div className="grid-section">
-
-          <div className="grid-area">
-
-            <div style={{ height: "600px", background: "#ddd" }}>그리드 영역</div>
-
-          </div>
-
-          <div className="grid-buttons">
-            <Button className="normal-button">등록</Button>
-            <Button className="normal-button">삭제</Button>
-            <Button className="normal-button" onClick={togglePopup}>저장</Button>
-            <Button className="confirm-button" onClick={togglePopup2}>확정</Button>
-          </div>
         </div>
 
       </div>
