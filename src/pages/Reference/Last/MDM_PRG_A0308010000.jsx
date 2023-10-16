@@ -53,12 +53,6 @@ const MDM_PRG_A0308010000 = (props) => {
 
           <div className="grid-headline">
 
-            <div className="result-info">
-              <span className="tit-icon"></span>
-              <span className="title">Result</span>
-              <span className="count">총 00개</span>
-            </div>
-
             <div className="grid-top-buttons">
               <Button>
                 SQL Viewer
@@ -76,6 +70,10 @@ const MDM_PRG_A0308010000 = (props) => {
 
           </div>
 
+          <div className="grid-total">
+            총 00개(현재페이지 0/전체페이지 000000)
+          </div>
+
           <div className="grid-buttons">
             <Button className="normal-button">등록</Button>
             <Button className="normal-button">삭제</Button>
@@ -91,6 +89,10 @@ const MDM_PRG_A0308010000 = (props) => {
 
             <div style={{ height: "600px", background: "#ddd" }}>그리드 영역</div>
 
+          </div>
+
+          <div className="grid-total">
+            총 00개(현재페이지 0/전체페이지 000000)
           </div>
 
           <div className="grid-buttons">

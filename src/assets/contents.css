@@ -38,6 +38,33 @@
     fill: #FDE932;
 }
 
+.contents .grid-tab-box {
+    display: flex;
+    padding:8px 0 6px 11px;
+    border-top:1px solid #ddd;
+}
+
+.contents .grid-tab-box .grid-tab {
+    cursor: pointer;
+    font-size:16px;
+    font-weight: 500;
+    color:#aaa;
+    line-height:24px;
+    padding:5px 12px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    margin-left:16px;
+}
+
+.contents .grid-tab-box .grid-tab:first-child {
+    margin-left: 0;
+}
+
+.contents .grid-tab-box .grid-tab.active {
+    color:#fff;
+    background-color:#159B97;
+}
+
 .breadcrumb {
     margin-bottom: 0;
     align-items: center;
@@ -76,6 +103,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    display: none;
 }
 
 .grid-headline .tit-icon {
@@ -106,9 +134,15 @@
     line-height: 24px;
 }
 
+.grid-total {
+    font-size:14px;
+    color:#444;
+    margin-top: 8px;
+}
+
 .grid-buttons {
     text-align: right;
-    margin-top: 20px;
+    margin-top: -12px;
 }
 
 .grid-buttons .dx-button,
