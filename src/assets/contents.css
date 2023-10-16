@@ -134,6 +134,11 @@
     line-height: 24px;
 }
 
+.grid-bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
 .grid-total {
     font-size:14px;
     color:#444;
@@ -141,8 +146,7 @@
 }
 
 .grid-buttons {
-    text-align: right;
-    margin-top: -12px;
+    margin-top: 16px;
 }
 
 .grid-buttons .dx-button,
