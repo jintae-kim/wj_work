@@ -81,7 +81,7 @@ const Aside = () => {
 
       {leftPanel}
 
-      <Button type="button" className="search-button" text="조회"></Button>
+      <Button type="button" className="search-button" text="조회" />
       
     </div>
   )
