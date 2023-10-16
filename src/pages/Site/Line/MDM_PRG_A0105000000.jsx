@@ -78,25 +78,6 @@ const MDM_PRG_A0105000000 = (props) => {
 
         <div className="grid-section">
 
-          <div className="grid-headline">
-
-            <div className="result-info">
-              <span className="tit-icon"></span>
-              <span className="title">Result</span>
-              <span className="count">총 00개</span>
-            </div>
-
-            <div className="grid-top-buttons">
-              <Button>
-                SQL Viewer
-              </Button>
-              <Button>
-                엑셀 다운로드
-              </Button>
-            </div>
-
-          </div>
-
           <div className="grid-area">
 
             <div
