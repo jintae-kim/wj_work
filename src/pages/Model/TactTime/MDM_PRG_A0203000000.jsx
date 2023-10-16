@@ -71,15 +71,17 @@ const MDM_PRG_A0203000000 = (props) => {
 
           </div>
 
-          <div className="grid-total">
-            총 00개(현재페이지 0/전체페이지 000000)
-          </div>
+          <div className="grid-bottom">
+            <div className="grid-total">
+              총 00개(현재페이지 0/전체페이지 000000)
+            </div>
 
-          <div className="grid-buttons">
-            <Button className="normal-button">등록</Button>
-            <Button className="normal-button">삭제</Button>
-            <Button className="normal-button" onClick={togglePopup}>저장</Button>
-            <Button className="confirm-button" onClick={togglePopup2}>확정</Button>
+            <div className="grid-buttons">
+              <Button className="normal-button">등록</Button>
+              <Button className="normal-button">삭제</Button>
+              <Button className="normal-button" onClick={togglePopup}>저장</Button>
+              <Button className="confirm-button" onClick={togglePopup2}>확정</Button>
+            </div>
           </div>
 
         </div>
@@ -92,15 +94,17 @@ const MDM_PRG_A0203000000 = (props) => {
 
           </div>
 
-          <div className="grid-total">
-            총 00개(현재페이지 0/전체페이지 000000)
-          </div>
+          <div className="grid-bottom">
+            <div className="grid-total">
+              총 00개(현재페이지 0/전체페이지 000000)
+            </div>
 
-          <div className="grid-buttons">
-            <Button className="normal-button">등록</Button>
-            <Button className="normal-button">삭제</Button>
-            <Button className="normal-button" onClick={togglePopup}>저장</Button>
-            <Button className="confirm-button" onClick={togglePopup2}>확정</Button>
+            <div className="grid-buttons">
+              <Button className="normal-button">등록</Button>
+              <Button className="normal-button">삭제</Button>
+              <Button className="normal-button" onClick={togglePopup}>저장</Button>
+              <Button className="confirm-button" onClick={togglePopup2}>확정</Button>
+            </div>
           </div>
         </div>
 
