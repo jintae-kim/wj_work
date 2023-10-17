@@ -177,15 +177,19 @@
     background-color:#159B97;
 }
 
-.grid-buttons .dx-button-mode-contained.dx-state-hover {
+.grid-buttons .dx-button.dx-state-hover {
     border:none;
     background-color:#444;
 }
 
-.grid-buttons .dx-button-mode-contained.dx-state-focused {
+.grid-buttons .dx-button.dx-state-focused {
     border:none;
     background-color:#777;
     font-weight: 700;
+}
+
+.grid-buttons .dx-button.dx-state-active {
+    color:#fff;
 }
 
 .grid-buttons .confirm-button.dx-state-hover {
