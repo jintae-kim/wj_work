@@ -100,3 +100,20 @@ ul, li, ol, li {list-style: none}
   position: relative;
   z-index: 99;
 }
+
+.error-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height:100vh;
+  flex-wrap: wrap;
+}
+
+.error-page .ep-box {
+  text-align: center;
+}
+
+.error-page .ep-box h1 {
+  margin-top: 60px;
+  font-size:48px;
+}
