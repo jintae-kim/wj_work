@@ -105,6 +105,10 @@
     align-items: center;
 }
 
+.grid-headline .grid-top-buttons {
+    margin-left: auto;
+}
+
 .grid-headline .tit-icon {
     width: 16px;
     height: 16px;

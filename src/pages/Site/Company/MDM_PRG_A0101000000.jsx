@@ -4,36 +4,8 @@ import { Link } from "react-router-dom";
 import { ReactComponent as Favorite } from "../../../image/favorite.svg";
 import "../../../assets/contents.css";
 import "../../../assets/modal.css";
-import { GridView, LocalDataProvider } from "realgrid";
-import { columns, fields, rows } from "../../../RealgridData/realgridData";
-import "realgrid/dist/realgrid-style.css";
 
 const MDM_PRG_A0101000000 = () => {
-  const [dataProvider, setDataProvider] = useState(null);
-  const [gridView, setGridView] = useState(null);
-  const realgridElement = useRef(null);
-
-  useEffect(() => {
-    const container = realgridElement.current;
-    const dp = new LocalDataProvider(true);
-    const gv = new GridView(container);
-
-    gv.setDataSource(dp);
-    dp.setFields(fields);
-    gv.setColumns(columns);
-    dp.setRows(rows);
-
-    setDataProvider(dp);
-    setGridView(gv);
-
-    return () => {
-      dp.clearRows();
-      gv.destroy();
-      dp.destroy();
-    }
-  }, []);
-
-
   const [isPopupVisible, setPopupVisibility] = useState(false);
  
   const togglePopup = () => {
@@ -104,8 +76,8 @@ const MDM_PRG_A0101000000 = () => {
 
             <div
               style={{ height: "600px", background: "#ddd" }}
-              ref={realgridElement}
             >
+              그리드영역
             </div>
 
           </div>

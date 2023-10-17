@@ -97,6 +97,10 @@
     width: 100%;
 }
 
+.dx-popup-normal .modal-body .mc-table + .mc-table {
+    border-top: 0;
+}
+
 .dx-popup-normal .modal-body .mc-table th {
     text-align: left;
     width: 120px;
