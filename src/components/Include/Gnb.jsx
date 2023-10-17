@@ -3,11 +3,11 @@ import { NavLink } from "react-router-dom";
 import "../../assets/gnb.css";
 import { MainNavItems } from "../Resources/MainNavItems";
 
-const Gnb = () => {
+const Gnb = ({ gnbFolding }) => {
   const navItems = MainNavItems;
 
   return (
-    <>
+    <div className="gnb-wrapper">
       <div className="gnb-headline">
 
         <h1><img src={`${process.env.PUBLIC_URL}/assets/img-tkg-logo.png`} width="66" alt="TKG - Taekwang" /></h1>
@@ -41,7 +41,7 @@ const Gnb = () => {
           </div>
           
           <div className="gnb-button">
-            <img src={`${process.env.PUBLIC_URL}/assets/gnb-btn.png`} alt="gnb-btn" width="36" />
+            <button type="button" className="gnb-fold" onClick={gnbFolding}><img src={`${process.env.PUBLIC_URL}/assets/gnb-btn.png`} alt="gnb-btn" width="36" /></button>
           </div>
         </div>
       </div>
@@ -79,7 +79,7 @@ const Gnb = () => {
           ))}
         </div>
       </div>
-    </>
+    </div>
   )
 }
 
