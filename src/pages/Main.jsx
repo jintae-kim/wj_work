@@ -56,10 +56,10 @@ const Main = (props) => {
 
           <ul>
             <li>
-              <Link to="/site/MDM_PRG_A0105000000">Grid - MDM_PRG_A0105000000</Link>
+              ✅ <Link to="/site/MDM_PRG_A0105000000">Grid - MDM_PRG_A0105000000</Link>
             </li>
             <li>
-              <Link to="/reference/MDM_PRG_A0302000000">Grid - Master > Detail - MDM_PRG_A0302000000</Link>
+              ✅ <Link to="/reference/MDM_PRG_A0302000000">Grid - Master > Detail - MDM_PRG_A0302000000</Link>
             </li>
             <li>
               <Link to="/reference/MDM_PRG_A0306010000">Grid - Tab - MDM_PRG_A0306010000</Link>
@@ -80,10 +80,10 @@ const Main = (props) => {
               <Link to="/reference/MDM_PRG_A0308010000">2Master – 1Detail - MDM_PRG_A0308010000</Link>
             </li>
             <li>
-              <Link to="/error">Error</Link>
+              ✅ <Link to="/error">Error</Link>
             </li>
             <li>
-              <Link to="/dkwjhdewjh">Notfound</Link>
+              ✅ <Link to="/dkwjhdewjh">Notfound</Link>
             </li>
           </ul>
 
