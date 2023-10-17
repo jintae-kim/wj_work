@@ -94,7 +94,7 @@
 }
 
 .dx-popup-normal .modal-footer .dx-button {
- margin:0 4px;   
+    margin:0 4px;   
 }
 
 .dx-popup-normal .modal-footer .dx-button .dx-button-content {
@@ -116,4 +116,61 @@
     background-color: #159B97;
     border-color: #159B97;
     color:#fff;
+}
+
+
+
+/* error */
+.dx-popup-normal .dx-popup-content .modal-body.error-popup-body {
+    text-align: center;
+}
+
+.dx-popup-normal .dx-popup-content .modal-body.error-popup-body .alert-img {
+    margin-bottom: 16px;
+}
+
+.dx-popup-normal .dx-popup-content .modal-body.error-popup-body .error-tit {
+    font-size:24px;
+    font-weight: 700;
+    line-height:36px;
+    margin-bottom: 8px;
+}
+
+.dx-popup-normal .dx-popup-content .modal-body.error-popup-body .error-txt {
+    font-size:20px;
+    color:#777;
+    line-height:30px;
+}
+
+.dx-popup-normal .dx-popup-content .modal-body.error-popup-body .error-code {
+    width: 100%;
+    background-color:#f8f8f8;
+    margin-top: 40px;
+    padding:16px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.dx-popup-normal .dx-popup-content .modal-body.error-popup-body .error-code p {
+    font-size:16px;
+    line-height: 32px;
+}
+
+.dx-popup-normal .dx-popup-content .modal-body.error-popup-body .error-code p.ec-bold {
+    font-weight: 700;
+    margin-right:20px;
+    padding-right:20px;
+    position: relative;
+}
+
+.dx-popup-normal .dx-popup-content .modal-body.error-popup-body .error-code p.ec-bold::after {
+    content:"";
+    display: block;
+    position: absolute;
+    width: 1px;
+    height:14px;
+    background-color:#ddd;
+    right:0;
+    top:50%;
+    transform: translateY(-50%);
 }
