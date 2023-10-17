@@ -141,9 +141,9 @@ const AppRoutes = () => {
           element:
             <Error/>
         },
-        { path: "*",  element: <Notfound title="Notfound" /> }
       ]
-    }
+    },
+    { path: "*",  element: <Notfound title="Notfound" /> }
   ]);
 
   return element;

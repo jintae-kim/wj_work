@@ -1,10 +1,8 @@
 import React, {useState} from "react";
 import { Gnb, Aside, HistoryStack } from "./components/Include";
-import Box, { Item } from 'devextreme-react/box';
 import 'devextreme/dist/css/dx.light.css'
 import 'devextreme/dist/css/dx.common.css'
 import { Outlet } from "react-router-dom";
-import { ReactComponent as Open } from "./image/aside_open.svg";
 import { Split } from "@geoffcox/react-splitter";
 
 

@@ -1,5 +1,5 @@
 import { Main } from "./Main";
 import { Notfound } from "./Notfound";
-import { Error } from "./error";
+import { Error } from "./Error";
 
 export { Main, Notfound, Error }
