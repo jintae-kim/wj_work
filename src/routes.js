@@ -1,6 +1,6 @@
 import React from "react";
 import { useRoutes } from "react-router-dom";
-import { Main, Notfound } from "./pages";
+import { Main, Notfound, Error } from "./pages";
 import {
   MDM_PRG_A0101000000,
   MDM_PRG_A0105000000,
@@ -135,6 +135,11 @@ const AppRoutes = () => {
               secondDepth="Product"
               firstDepthPath="/model"
             />
+        },
+        {
+          path: "/error",
+          element:
+            <Error/>
         },
       ]
     },
