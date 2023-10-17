@@ -79,6 +79,12 @@ const Main = (props) => {
             <li>
               <Link to="/reference/MDM_PRG_A0308010000">2Master – 1Detail - MDM_PRG_A0308010000</Link>
             </li>
+            <li>
+              <Link to="/error">Error</Link>
+            </li>
+            <li>
+              <Link to="/dkwjhdewjh">Notfound</Link>
+            </li>
           </ul>
 
           <div className="grid-bottom">
