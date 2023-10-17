@@ -136,9 +136,9 @@ const AppRoutes = () => {
               firstDepthPath="/model"
             />
         },
-        { path: "*",  element: <Notfound title="Notfound" /> }
       ]
-    }
+    },
+    { path: "*",  element: <Notfound title="Notfound" /> }
   ]);
 
   return element;

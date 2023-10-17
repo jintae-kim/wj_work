@@ -51,19 +51,6 @@ const MDM_PRG_A0302000000 = (props) => {
 
         <div className="grid-section">
 
-          <div className="grid-headline">
-
-            <div className="grid-top-buttons">
-              <Button>
-                SQL Viewer
-              </Button>
-              <Button>
-                엑셀 다운로드
-              </Button>
-            </div>
-
-          </div>
-
           <div className="grid-area">
 
             <div style={{ height: "600px", background: "#ddd" }}>그리드 영역</div>
@@ -76,8 +63,6 @@ const MDM_PRG_A0302000000 = (props) => {
             </div>
 
             <div className="grid-buttons">
-              <Button className="normal-button">등록</Button>
-              <Button className="normal-button">삭제</Button>
               <Button className="normal-button" onClick={togglePopup}>저장</Button>
               <Button className="confirm-button" onClick={togglePopup2}>확정</Button>
             </div>
@@ -87,6 +72,15 @@ const MDM_PRG_A0302000000 = (props) => {
 
         <div className="grid-section">
 
+          <div className="grid-headline">
+
+            <div className="result-info">
+              <span className="tit-icon"></span>
+              <span className="title">Detail</span>
+            </div>
+
+          </div>
+
           <div className="grid-area">
 
             <div style={{ height: "600px", background: "#ddd" }}>그리드 영역</div>
@@ -101,8 +95,6 @@ const MDM_PRG_A0302000000 = (props) => {
             <div className="grid-buttons">
               <Button className="normal-button">등록</Button>
               <Button className="normal-button">삭제</Button>
-              <Button className="normal-button" onClick={togglePopup}>저장</Button>
-              <Button className="confirm-button" onClick={togglePopup2}>확정</Button>
             </div>
           </div>
         </div>
