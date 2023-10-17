@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { Gnb, Aside, HistoryStack } from "./components/Include";
 import Box, { Item } from 'devextreme-react/box';
 import 'devextreme/dist/css/dx.light.css'
@@ -9,15 +9,16 @@ import { Split } from "@geoffcox/react-splitter";
 
 
 const LayoutProvider = () => {
+  const [isFold, setIsFold] = useState(null);
 
-  const openAside = () => {
-    document.querySelector('.aside-section').classList.remove('hide');
+  const gnbFolding = () => {
+    setIsFold(!isFold);
   }
 
   return (
-    <div className="container-wrapper">
+    <div className={`container-wrapper ${isFold ? "gnbFold" : "gnbUnFold"}`}>
 
-      <Gnb />
+      <Gnb gnbFolding={gnbFolding} />
 
       <div className="contents-wrapper">
 
