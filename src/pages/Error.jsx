@@ -40,7 +40,7 @@ const Error = () => {
       >        
         <div className="modal-body error-popup-body">
 
-          <Alertimg className="alert-img"/>
+          <Alertimg className="alert-img" width={90} height={90}/>
 
           <h1 className="error-tit">시스템에서 예상치 못한 오류가 발생했습니다.</h1>
           <p className="error-txt">
@@ -80,7 +80,7 @@ const Error = () => {
       >        
         <div className="modal-body error-popup-body">
 
-          <Alertimg className="alert-img"/>
+          <Alertimg className="alert-img" width={90} height={90}/>
 
           <h1 className="error-tit">시스템에서 예상치 못한 오류가 발생했습니다.</h1>
           <p className="error-txt">
