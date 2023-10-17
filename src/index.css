@@ -45,6 +45,11 @@ ul, li, ol, li {list-style: none}
   flex-basis: auto;
   transition: all 0.5s ease;
 }
+.gnbFold .aside-section,
+.gnbFold .aside-section .aside-scroll,
+.gnbFold .contents-section .contents{
+  height: calc(100vh - 119px);
+}
 
 .aside-section::after {
   position: absolute;
