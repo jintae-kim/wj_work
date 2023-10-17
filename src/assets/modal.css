@@ -87,6 +87,55 @@
     color:#333;
 }
 
+.dx-popup-normal .modal-body .md-table-box {
+    margin-bottom: 70px;
+}
+
+.dx-popup-normal .modal-body .mc-table {
+    border-collapse: collapse;
+    border-top:1px solid #000;
+    width: 100%;
+}
+
+.dx-popup-normal .modal-body .mc-table th {
+    text-align: left;
+    width: 120px;
+    background-color:#f8f8f8;
+    padding:20px;
+    border-bottom:1px solid #EEE;
+    color:#777;
+}
+
+.dx-popup-normal .modal-body .mc-table td {
+    text-align: left;
+    padding:8px 20px;
+    border-bottom:1px solid #EEE;
+}
+
+.dx-popup-normal .modal-body .mc-table td .dx-texteditor.dx-editor-outlined {
+    width: 100%;
+    border-color: #eee;
+}
+
+.dx-popup-normal .modal-body .mc-table td .dx-texteditor.dx-editor-outlined .dx-texteditor-input {
+    padding:12px 20px;
+}
+
+.dx-popup-normal .modal-body .mc-table td.row-box {
+    padding:0;
+    border-bottom:0;
+}
+
+.dx-popup-normal .modal-body .md-table-box .mtb-button-wrap {
+    text-align: right;
+    margin-top: 10px;
+}
+
+.dx-popup-normal .dx-popup-title.dx-toolbar .dx-closebutton .dx-button-content {
+    min-width: auto;
+    padding: 8px;
+}
+
 .dx-popup-normal .modal-footer {
     margin-top: 16px;
     justify-content: center;
@@ -97,7 +146,7 @@
     margin:0 4px;   
 }
 
-.dx-popup-normal .modal-footer .dx-button .dx-button-content {
+.dx-popup-normal .dx-button .dx-button-content {
     min-width: 100px;
     padding:12px 20px;
     box-sizing: border-box;
@@ -106,13 +155,13 @@
     line-height: 24px;
 }
 
-.dx-popup-normal .modal-footer .dx-button.cancle-btn {
+.dx-popup-normal .dx-button.cancle-btn {
     color:#000;
     border:1px solid #DDD;
     background-color:#fff;
 }
 
-.dx-popup-normal .modal-footer .dx-button.confirm-btn {
+.dx-popup-normal .dx-button.confirm-btn {
     background-color: #159B97;
     border-color: #159B97;
     color:#fff;
