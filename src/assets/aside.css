@@ -85,6 +85,10 @@
     background:none;
 }
 
+.aside-scroll .search-button.dx-state-active {
+    color:#fff;
+}
+
 .aside-scroll .search-cate {
     margin-bottom: 25px;
 }
@@ -247,4 +251,8 @@
 .aside-scroll .search-cate .sc-box .sc-cont .radio-box .radio-tit {
     font-size:16px;
     margin-left: 5px;
+}
+
+.dx-selectbox-popup-wrapper.dx-popup-wrapper .dx-overlay-content {
+    top:4px !important;
 }

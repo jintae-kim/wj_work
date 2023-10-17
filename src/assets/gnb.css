@@ -155,7 +155,7 @@
     left:0;
     padding: 40px 40px 40px 118px;
     box-sizing: border-box;
-    z-index: 9;
+    z-index: 1502;
 }
 
 .main-navigation .nav .nav-item:hover .sub-depth-nav {
