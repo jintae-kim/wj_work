@@ -1,5 +1,5 @@
 import React, {useEffect, useRef, useState} from "react";
-import { Button, Popup } from "devextreme-react";
+import {Button, Popup, SelectBox, TextBox} from "devextreme-react";
 import { Link } from "react-router-dom";
 import { ReactComponent as Favorite } from "../../../image/favorite.svg";
 import "../../../assets/contents.css";
@@ -18,11 +18,19 @@ const MDM_PRG_A0105000000 = (props) => {
     setPopupVisibility2(!isPopupVisible2);
   };
 
+  const [isPopupVisible3, setPopupVisibility3] = useState(false);
+
+  const togglePopup3 = () => {
+    setPopupVisibility3(!isPopupVisible3);
+  };
+
   const [isActive, setActive] = useState(false);
 
   const toggleFavorite = () => {
     setActive(!isActive);
   }
+
+  const searchSelect = ['All', 'EX']
 
 
   return (
@@ -67,7 +75,7 @@ const MDM_PRG_A0105000000 = (props) => {
             </div>
 
             <div className="grid-buttons">
-              <Button className="normal-button">등록</Button>
+              <Button className="normal-button" onClick={togglePopup3}>등록</Button>
               <Button className="normal-button">삭제</Button>
               <Button className="normal-button" onClick={togglePopup}>저장</Button>
               <Button className="confirm-button" onClick={togglePopup2}>확정</Button>
@@ -91,7 +99,7 @@ const MDM_PRG_A0105000000 = (props) => {
       >
         <div className="modal-header">
           <h3 className="modal-tit">저장</h3>
-          <span className="modal-subtit">Company</span>
+          <span className="modal-subtit">{props.title}</span>
         </div>
 
         <div className="modal-body">
@@ -125,7 +133,7 @@ const MDM_PRG_A0105000000 = (props) => {
       >
         <div className="modal-header">
           <h3 className="modal-tit">확정</h3>
-          <span className="modal-subtit">Company</span>
+          <span className="modal-subtit">{props.title}</span>
         </div>
 
         <div className="modal-body">
@@ -145,6 +153,105 @@ const MDM_PRG_A0105000000 = (props) => {
 
       </Popup>
       {/* 확정 모달 --// */}
+
+      {/* //-- 등록 모달 */}
+      <Popup
+        visible={isPopupVisible3}
+        hideOnOutsideClick={true}
+        onHiding={togglePopup3}
+        width={1280}
+        height={"auto"}
+        dragEnabled={false}
+        shadingColor="rgba(0, 0, 0, 0.5)"
+      >
+        <div className="modal-header">
+          <h3 className="modal-tit">등록</h3>
+          <span className="modal-subtit">{props.title}</span>
+        </div>
+
+        <div className="modal-body">
+
+          <div className="md-table-box">
+            <h5 className="mc-tit">
+              <span className="mct-icon"></span>정보 입력
+            </h5>
+
+            <table className="mc-table">
+              <tbody>
+                <tr>
+                  <th>Factory</th>
+                  <td>
+                    <SelectBox
+                      name=""
+                      id=""
+                      className="sc-select"
+                      items={searchSelect}
+                      placeholder="Factory Code 선택"
+                    />
+                  </td>
+                  <th>Plant</th>
+                  <td>
+                    <SelectBox
+                      name=""
+                      id=""
+                      className="sc-select"
+                      items={searchSelect}
+                      placeholder="Plant Code 선택"
+                    />
+                  </td>
+                  <th>Operation</th>
+                  <td>
+                    <SelectBox
+                      name=""
+                      id=""
+                      className="sc-select"
+                      items={searchSelect}
+                      placeholder="Operation Code 선택"
+                    />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <table className="mc-table">
+              <tbody>
+                <tr>
+                  <th>Line Code</th>
+                  <td><TextBox inputAttr="" className="dx-field-value" defaultValue="" placeholder="Line Code" /></td>
+                  <th>Line Name</th>
+                  <td><TextBox inputAttr="" className="dx-field-value" defaultValue="" placeholder="Line Name" /></td>
+                </tr>
+
+                <tr>
+                  <th>Line Short Name</th>
+                  <td><TextBox inputAttr="" className="dx-field-value" defaultValue="" placeholder="Line Short Name" /></td>
+                  <th>Line Type</th>
+                  <td><TextBox inputAttr="" className="dx-field-value" defaultValue="" placeholder="Line Type" /></td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div className="mtb-button-wrap">
+              <Button className="confirm-btn">저장</Button>
+            </div>
+          </div>
+
+          <div className="md-grid-box">
+            <h5 className="mc-tit">
+              <span className="mct-icon"></span>등록 목록(총 4개)
+            </h5>
+
+            <div className="grid-box">그리드영역</div>
+          </div>
+
+        </div>
+
+        <div className="modal-footer">
+          <Button className="confirm-btn" onClick={togglePopup3}>닫기</Button>
+        </div>
+
+      </Popup>
+      {/* 등록 모달 --// */}
 
     </div>
   )

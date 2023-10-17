@@ -114,7 +114,7 @@ const MDM_PRG_A0302000000 = (props) => {
       >
         <div className="modal-header">
           <h3 className="modal-tit">저장</h3>
-          <span className="modal-subtit">Company</span>
+          <span className="modal-subtit">{props.title}</span>
         </div>
 
         <div className="modal-body">
@@ -148,7 +148,7 @@ const MDM_PRG_A0302000000 = (props) => {
       >
         <div className="modal-header">
           <h3 className="modal-tit">확정</h3>
-          <span className="modal-subtit">Company</span>
+          <span className="modal-subtit">{props.title}</span>
         </div>
 
         <div className="modal-body">
