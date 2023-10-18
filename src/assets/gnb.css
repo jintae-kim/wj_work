@@ -71,9 +71,15 @@
 }
 
 .gnb-headline .gnb-user {
+    position: relative;
+    z-index: 10;
     display: flex;
     align-items: center;
     margin-top: 2px;
+}
+
+.gnb-headline .gnb-user:hover .personal-menu {
+    display: block;
 }
 
 .gnb-headline .gnb-user .user-icon {
@@ -87,6 +93,59 @@
     font-weight:700;
     margin: 0;
     margin-left: 8px;
+}
+
+.gnb-headline .gnb-user .personal-menu {
+    display: none;
+    position: absolute;
+    z-index: 10;
+    top: 24px;
+    left: -12px;
+    padding-top: 6px;
+}
+
+.gnb-headline .gnb-user .personal-menu ul {
+    width: 116px;
+    border: 1px solid #eeeeee;
+    border-radius: 16px;
+    padding: 10px;
+    text-align: center;
+    background: #ffffff;
+    box-shadow: 0 4px 8px 0 #eeeeee;
+}
+
+.gnb-headline .gnb-user .personal-menu ul:before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 21px;
+    display: block;
+    width: 6px;
+    height: 6px;
+    background: #ffffff;
+    border-top: 1px solid #eee;
+    border-left: 1px solid #eee;
+    transform: rotate(45deg);
+}
+
+.gnb-headline .gnb-user .personal-menu * {
+    font-size: 14px;
+    color: #777777;
+}
+
+.gnb-headline .gnb-user .personal-menu a {
+    display: block;
+    padding: 8px;
+    line-height: 16px;
+    border-radius: 16px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.gnb-headline .gnb-user .personal-menu a:hover {
+    background: #159B97;
+    color: #ffffff;
+    font-weight: 700;
 }
 
 .gnb-headline .gnb-button {
