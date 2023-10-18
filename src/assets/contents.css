@@ -113,11 +113,40 @@
     margin-top: 0;
 }
 
+.grid-split .react-split > .split-container.horizontal > .splitter {
+    margin: 0;
+}
+
+.grid-split .react-split > .split-container.horizontal > .splitter .line {
+    margin: 0 !important;
+    height: 16px !important;
+    border:1px solid #AAA;
+    background-color:#eee !important; 
+    position: relative;
+}
+
+.grid-split .react-split > .split-container.horizontal > .splitter .line::after {
+    content:"";
+    display: block;
+    position: absolute;
+    background-image:url('/public/assets/icon_splitter2.png');
+    background-repeat: no-repeat;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    width: 14px;
+    height: 6px;
+}
+
 .grid-headline {
     margin-bottom: 8px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.grid-headline.gh2 {
+    margin-top: 8px;
 }
 
 .grid-headline .grid-top-buttons {
