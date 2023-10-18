@@ -38,21 +38,13 @@
     fill: #FDE932;
 }
 
-.contents .grid-tab-box {
-    display: flex;
-    padding:8px 0 6px 11px;
+.contents .grid-tab-box {    
+    padding:10px 0 8px 11px;
     border-top:1px solid #ddd;
 }
 
-.contents .grid-tab-box .grid-tab {
-    cursor: pointer;
-    font-size:16px;
-    font-weight: 500;
-    color:#aaa;
-    line-height:24px;
-    padding:5px 12px;
-    border-radius: 12px;
-    transition: all 0.3s ease;
+.contents .grid-tab-box .grid-tab {        
+    width: auto;
     margin-left:16px;
 }
 
@@ -60,7 +52,18 @@
     margin-left: 0;
 }
 
-.contents .grid-tab-box .grid-tab.active {
+.contents .grid-tab-box .grid-tab .gt-link {
+    text-decoration: none;
+    font-weight: 500;    
+    font-size:16px;
+    color:#aaa;
+    line-height:24px;
+    padding:7px 12px;
+    border-radius: 12px;
+    transition: all 0.3s ease;    
+}
+
+.contents .grid-tab-box .grid-tab .gt-link.active {
     color:#fff;
     background-color:#159B97;
 }

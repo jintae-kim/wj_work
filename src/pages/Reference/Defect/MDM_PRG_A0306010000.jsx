@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { ReactComponent as Favorite } from "../../../image/favorite.svg";
 import "../../../assets/contents.css"
 import "../../../assets/modal.css"
+import { TabList } from "../TabList";
 
 const MDM_PRG_A0306010000 = (props) => {
   const [isPopupVisible, setPopupVisibility] = useState(false);
@@ -30,27 +31,7 @@ const MDM_PRG_A0306010000 = (props) => {
     setActive(!isActive);
   }
 
-  const exSelect = ['All', 'EX']
-
-  //탭메뉴
-  const tabActive = () => {
-
-    const tabItem = document.querySelectorAll('.grid-tab');
-
-    tabItem.forEach((tab, idx)=> {    
-      tab.addEventListener('click', function(){        
-          tabItem.forEach((item)=> {
-              item.classList.remove('active');
-          });
-  
-          tabItem[idx].classList.add('active');  
-      });      
-    });
-  }
-
-  useEffect(() => {
-    tabActive();
-  }, []);
+  const exSelect = ['All', 'EX']  
   
 
   return (
@@ -73,12 +54,9 @@ const MDM_PRG_A0306010000 = (props) => {
             {props.secondDepth}
           </li>
         </ul>
-      </div>
+      </div>      
 
-      <ul className="grid-tab-box">
-        <li className="grid-tab active">불량코드</li>
-        <li className="grid-tab">불량코드 그룹</li>
-      </ul>
+      <TabList/>
 
       <div className="grid-container">
 
@@ -198,56 +176,58 @@ const MDM_PRG_A0306010000 = (props) => {
             </h5>
 
             <table className="mc-table">
-              <tr>
-                <td colSpan={4} className="row-box">
-                  <table className="mc-table">
-                    <th>Factory</th>
-                    <td>
-                      <SelectBox 
-                          name="" 
-                          id="" 
-                          className="sc-select"
-                          items={exSelect}
-                          placeholder="Factory Code 선택"
-                      />
-                    </td>
-                    <th>Plant</th>
-                    <td>
-                      <SelectBox 
-                          name="" 
-                          id="" 
-                          className="sc-select"
-                          items={exSelect}
-                          placeholder="Plant Code 선택"
-                      />
-                    </td>
-                    <th>Operation</th>
-                    <td>
-                      <SelectBox 
-                          name="" 
-                          id="" 
-                          className="sc-select"
-                          items={exSelect}
-                          placeholder="Operation Code 선택"
-                      />
-                    </td>
-                  </table>
-                </td>                
-              </tr>
+              <tbody>
+                <tr>
+                  <th>Factory</th>
+                  <td>
+                    <SelectBox
+                      name=""
+                      id=""
+                      className="sc-select"
+                      items={exSelect}
+                      placeholder="Factory Code 선택"
+                    />
+                  </td>
+                  <th>Plant</th>
+                  <td>
+                    <SelectBox
+                      name=""
+                      id=""
+                      className="sc-select"
+                      items={exSelect}
+                      placeholder="Plant Code 선택"
+                    />
+                  </td>
+                  <th>Operation</th>
+                  <td>
+                    <SelectBox
+                      name=""
+                      id=""
+                      className="sc-select"
+                      items={exSelect}
+                      placeholder="Operation Code 선택"
+                    />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
 
-              <tr>
-                <th>Line Code</th>
-                <td><TextBox inputAttr="" className="dx-field-value" defaultValue="" placeholder="Line Code" /></td>
-                <th>Line Name</th>
-                <td><TextBox inputAttr="" className="dx-field-value" defaultValue="" placeholder="Line Name" /></td>
-              </tr>
+            <table className="mc-table">
+              <tbody>
+                <tr>
+                  <th>Line Code</th>
+                  <td><TextBox inputAttr="" className="dx-field-value" defaultValue="" placeholder="Line Code" /></td>
+                  <th>Line Name</th>
+                  <td><TextBox inputAttr="" className="dx-field-value" defaultValue="" placeholder="Line Name" /></td>
+                </tr>
 
-              <tr>
-                <th>Line Short Name</th>
-                <td><TextBox inputAttr="" className="dx-field-value" defaultValue="" placeholder="Line Short Name" /></td>
-                <th>Line Type</th>
-                <td><TextBox inputAttr="" className="dx-field-value" defaultValue="" placeholder="Line Type" /></td>
-              </tr>
+                <tr>
+                  <th>Line Short Name</th>
+                  <td><TextBox inputAttr="" className="dx-field-value" defaultValue="" placeholder="Line Short Name" /></td>
+                  <th>Line Type</th>
+                  <td><TextBox inputAttr="" className="dx-field-value" defaultValue="" placeholder="Line Type" /></td>
+                </tr>
+              </tbody>
             </table>
 
             <div className="mtb-button-wrap">

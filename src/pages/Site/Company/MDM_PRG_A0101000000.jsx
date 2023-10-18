@@ -213,56 +213,58 @@ const MDM_PRG_A0101000000 = () => {
             </h5>
 
             <table className="mc-table">
-              <tr>
-                <td colSpan={4} className="row-box">
-                  <table className="mc-table">
-                    <th>Factory</th>
-                    <td>
-                      <SelectBox 
-                          name="" 
-                          id="" 
-                          className="sc-select"
-                          items={exSelect}
-                          placeholder="Factory Code 선택"
-                      />
-                    </td>
-                    <th>Plant</th>
-                    <td>
-                      <SelectBox 
-                          name="" 
-                          id="" 
-                          className="sc-select"
-                          items={exSelect}
-                          placeholder="Plant Code 선택"
-                      />
-                    </td>
-                    <th>Operation</th>
-                    <td>
-                      <SelectBox 
-                          name="" 
-                          id="" 
-                          className="sc-select"
-                          items={exSelect}
-                          placeholder="Operation Code 선택"
-                      />
-                    </td>
-                  </table>
-                </td>                
-              </tr>
+              <tbody>
+                <tr>
+                  <th>Factory</th>
+                  <td>
+                    <SelectBox
+                      name=""
+                      id=""
+                      className="sc-select"
+                      items={exSelect}
+                      placeholder="Factory Code 선택"
+                    />
+                  </td>
+                  <th>Plant</th>
+                  <td>
+                    <SelectBox
+                      name=""
+                      id=""
+                      className="sc-select"
+                      items={exSelect}
+                      placeholder="Plant Code 선택"
+                    />
+                  </td>
+                  <th>Operation</th>
+                  <td>
+                    <SelectBox
+                      name=""
+                      id=""
+                      className="sc-select"
+                      items={exSelect}
+                      placeholder="Operation Code 선택"
+                    />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
 
-              <tr>
-                <th>Line Code</th>
-                <td><TextBox inputAttr="" className="dx-field-value" defaultValue="" placeholder="Line Code" /></td>
-                <th>Line Name</th>
-                <td><TextBox inputAttr="" className="dx-field-value" defaultValue="" placeholder="Line Name" /></td>
-              </tr>
+            <table className="mc-table">
+              <tbody>
+                <tr>
+                  <th>Line Code</th>
+                  <td><TextBox inputAttr="" className="dx-field-value" defaultValue="" placeholder="Line Code" /></td>
+                  <th>Line Name</th>
+                  <td><TextBox inputAttr="" className="dx-field-value" defaultValue="" placeholder="Line Name" /></td>
+                </tr>
 
-              <tr>
-                <th>Line Short Name</th>
-                <td><TextBox inputAttr="" className="dx-field-value" defaultValue="" placeholder="Line Short Name" /></td>
-                <th>Line Type</th>
-                <td><TextBox inputAttr="" className="dx-field-value" defaultValue="" placeholder="Line Type" /></td>
-              </tr>
+                <tr>
+                  <th>Line Short Name</th>
+                  <td><TextBox inputAttr="" className="dx-field-value" defaultValue="" placeholder="Line Short Name" /></td>
+                  <th>Line Type</th>
+                  <td><TextBox inputAttr="" className="dx-field-value" defaultValue="" placeholder="Line Type" /></td>
+                </tr>
+              </tbody>
             </table>
 
             <div className="mtb-button-wrap">
