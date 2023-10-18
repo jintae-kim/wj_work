@@ -77,7 +77,7 @@ const Main = (props) => {
               ✅ <Link to="/model/MDM_PRG_A0202000000">Master-3Detail - MDM_PRG_A0202000000</Link>
             </li>
             <li>
-              <Link to="/reference/MDM_PRG_A0308010000">2Master – 1Detail - MDM_PRG_A0308010000</Link>
+              ✅ <Link to="/reference/MDM_PRG_A0308010000">2Master – 1Detail - MDM_PRG_A0308010000</Link>
             </li>
             <li>
               ✅ <Link to="/error">Error</Link>
