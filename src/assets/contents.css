@@ -100,6 +100,15 @@
     margin-top:20px;
 }
 
+.gird-flex {
+    display: flex;
+}
+
+.gird-flex .grid-wrap {
+    width: calc(100% - 340px);
+    margin-left: 20px;
+}
+
 .grid-two-wrap {
     display: flex;
     justify-content: space-between;
