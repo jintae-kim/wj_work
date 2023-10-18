@@ -117,3 +117,11 @@ ul, li, ol, li {list-style: none}
   margin-top: 60px;
   font-size:48px;
 }
+
+.react-split > .split-container > .splitter,
+.react-split > .split-container.vertical > .splitter{
+  width: 20px;
+  margin-left: -20px;
+  position: relative;
+  z-index: 10;
+}
