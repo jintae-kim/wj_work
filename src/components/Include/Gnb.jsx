@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
 import "../../assets/gnb.css";
 import { MainNavItems } from "../Resources/MainNavItems";
 
@@ -37,7 +37,14 @@ const Gnb = ({ gnbFolding }) => {
 
           <div className="gnb-user">
             <img src={`${process.env.PUBLIC_URL}/assets/user-icon.png`} alt="user-icon" className="user-icon" />
-            <p className="user-name">홍길동</p>
+            <p className="user-name">홍길동형 이사</p>
+
+            <div className="personal-menu">
+              <ul>
+                <li><Link to="">즐겨찾기</Link></li>
+                <li><Link to="">계정관리</Link></li>
+              </ul>
+            </div>
           </div>
           
           <div className="gnb-button">
