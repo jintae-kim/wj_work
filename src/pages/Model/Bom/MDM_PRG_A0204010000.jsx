@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, {useState} from "react";
 import { Button, Popup } from "devextreme-react";
 import { Link } from "react-router-dom";
 import { ReactComponent as Favorite } from "../../../image/favorite.svg";
@@ -24,26 +24,6 @@ const MDM_PRG_A0204010000 = (props) => {
     setActive(!isActive);
   }
 
-  //탭메뉴
-  const tabActive = () => {
-
-    const tabItem = document.querySelectorAll('.grid-tab');
-
-    tabItem.forEach((tab, idx)=> {    
-      tab.addEventListener('click', function(){        
-          tabItem.forEach((item)=> {
-              item.classList.remove('active');
-          });
-  
-          tabItem[idx].classList.add('active');  
-      });      
-    });
-  }
-
-  useEffect(() => {
-    tabActive();
-  }, []);
-
 
   return (
 
@@ -67,16 +47,17 @@ const MDM_PRG_A0204010000 = (props) => {
         </ul>
       </div>
 
-      <ul className="grid-tab-box">
-        <li className="grid-tab active">BOM</li>
-        <li className="grid-tab">BOM Structure</li>
-      </ul>
-
       <div className="grid-container">
 
         <div className="grid-section">
 
           <div className="grid-headline">
+
+            <div className="result-info">
+              <span className="tit-icon"></span>
+              <span className="title">Result</span>
+              <span className="count">총 00개</span>
+            </div>
 
             <div className="grid-top-buttons">
               <Button>
@@ -95,17 +76,15 @@ const MDM_PRG_A0204010000 = (props) => {
 
           </div>
 
-          <div className="grid-bottom">
-            <div className="grid-total">
-              총 00개(현재페이지 0/전체페이지 000000)
-            </div>
+          <div className="grid-total">
+            총 00개(현재페이지 0/전체페이지 000000)
+          </div>
 
-            <div className="grid-buttons">
-              <Button className="normal-button">등록</Button>
-              <Button className="normal-button">삭제</Button>
-              <Button className="normal-button" onClick={togglePopup}>저장</Button>
-              <Button className="confirm-button" onClick={togglePopup2}>확정</Button>
-            </div>
+          <div className="grid-buttons">
+            <Button className="normal-button">등록</Button>
+            <Button className="normal-button">삭제</Button>
+            <Button className="normal-button" onClick={togglePopup}>저장</Button>
+            <Button className="confirm-button" onClick={togglePopup2}>확정</Button>
           </div>
 
         </div>
@@ -118,17 +97,11 @@ const MDM_PRG_A0204010000 = (props) => {
 
           </div>
 
-          <div className="grid-bottom">
-            <div className="grid-total">
-              총 00개(현재페이지 0/전체페이지 000000)
-            </div>
-
-            <div className="grid-buttons">
-              <Button className="normal-button">등록</Button>
-              <Button className="normal-button">삭제</Button>
-              <Button className="normal-button" onClick={togglePopup}>저장</Button>
-              <Button className="confirm-button" onClick={togglePopup2}>확정</Button>
-            </div>
+          <div className="grid-buttons">
+            <Button className="normal-button">등록</Button>
+            <Button className="normal-button">삭제</Button>
+            <Button className="normal-button" onClick={togglePopup}>저장</Button>
+            <Button className="confirm-button" onClick={togglePopup2}>확정</Button>
           </div>
         </div>
 
