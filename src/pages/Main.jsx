@@ -68,7 +68,7 @@ const Main = (props) => {
               <Link to="/model/MDM_PRG_A0204010000">Grid - Tree - MDM_PRG_A0204010000</Link>
             </li>
             <li>
-              <Link to="/model/MDM_PRG_A0203000000">Graph - Grid - MDM_PRG_A0203000000</Link>
+              ✅ <Link to="/model/MDM_PRG_A0203000000">Graph - Grid - MDM_PRG_A0203000000</Link>
             </li>
             <li>
               <Link to="/model/MDM_PRG_A0201000000">Master-Detail-Detail Grid - MDM_PRG_A0201000000</Link>
