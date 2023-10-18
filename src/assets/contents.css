@@ -94,8 +94,23 @@
     vertical-align: middle;
 }
 
-.grid-section + .grid-section {
+.grid-section + .grid-section,
+.grid-section + .grid-two-wrap,
+.grid-two-wrap + .grid-section {
     margin-top:20px;
+}
+
+.grid-two-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.grid-two-wrap .grid-section {
+    width: calc(50% - 10px);
+}
+
+.grid-two-wrap .grid-section + .grid-section {
+    margin-top: 0;
 }
 
 .grid-headline {
