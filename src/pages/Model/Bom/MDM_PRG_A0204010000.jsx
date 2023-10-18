@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, {useState , useEffect} from "react";
 import { Button, Popup } from "devextreme-react";
 import { Link } from "react-router-dom";
 import { ReactComponent as Favorite } from "../../../image/favorite.svg";
@@ -72,62 +72,50 @@ const MDM_PRG_A0204010000 = (props) => {
         <li className="grid-tab">BOM Structure</li>
       </ul>
 
-      <div className="grid-container">
+      <div className="grid-container gird-flex">
 
-        <div className="grid-section">
-
-          <div className="grid-headline">
-
-            <div className="grid-top-buttons">
-              <Button>
-                SQL Viewer
-              </Button>
-              <Button>
-                엑셀 다운로드
-              </Button>
-            </div>
-
-          </div>
-
-          <div className="grid-area">
-
-            <div style={{ height: "600px", background: "#ddd" }}>그리드 영역</div>
-
-          </div>
-
-          <div className="grid-bottom">
-            <div className="grid-total">
-              총 00개(현재페이지 0/전체페이지 000000)
-            </div>
-
-            <div className="grid-buttons">
-              <Button className="normal-button">등록</Button>
-              <Button className="normal-button">삭제</Button>
-              <Button className="normal-button" onClick={togglePopup}>저장</Button>
-              <Button className="confirm-button" onClick={togglePopup2}>확정</Button>
-            </div>
-          </div>
-
+        <div className="grid-tree">
+          <div style={{ height: "100%", width:"320px", borderRadius:"8px", background: "#ddd" }}>트리 영역</div>
         </div>
 
-        <div className="grid-section">
+        <div className="grid-wrap">
+          <div className="grid-section">          
 
-          <div className="grid-area">
+            <div className="grid-area">
 
-            <div style={{ height: "600px", background: "#ddd" }}>그리드 영역</div>
+              <div style={{ height: "400px", background: "#ddd" }}>그리드 영역</div>
+
+            </div>
+
+            <div className="grid-bottom">
+              <div className="grid-total">
+                총 00개(현재페이지 0/전체페이지 000000)
+              </div>
+            </div>
 
           </div>
 
-          <div className="grid-bottom">
-            <div className="grid-total">
-              총 00개(현재페이지 0/전체페이지 000000)
+          <div className="grid-section">
+
+            <div className="grid-headline">
+
+              <div className="result-info">
+                <span className="tit-icon"></span>
+                <span className="title">Routing</span>              
+              </div>
+
             </div>
 
-            <div className="grid-buttons">
-              <Button className="normal-button">등록</Button>
-              <Button className="normal-button">삭제</Button>
-              <Button className="normal-button" onClick={togglePopup}>저장</Button>
-              <Button className="confirm-button" onClick={togglePopup2}>확정</Button>
+            <div className="grid-area">
+
+              <div style={{ height: "400px", background: "#ddd" }}>그리드 영역</div>
+
+            </div>
+
+            <div className="grid-bottom">
+              <div className="grid-total">
+                총 00개(현재페이지 0/전체페이지 000000)
+              </div>
             </div>
           </div>
         </div>

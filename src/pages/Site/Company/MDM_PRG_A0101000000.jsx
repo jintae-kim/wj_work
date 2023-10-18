@@ -30,7 +30,7 @@ const MDM_PRG_A0101000000 = () => {
     setActive(!isActive);
   }
 
-  const searchSelect = ['All', 'EX']
+  const exSelect = ['All', 'EX']
   
 
   return (
@@ -222,7 +222,7 @@ const MDM_PRG_A0101000000 = () => {
                           name="" 
                           id="" 
                           className="sc-select"
-                          items={searchSelect}
+                          items={exSelect}
                           placeholder="Factory Code 선택"
                       />
                     </td>
@@ -232,7 +232,7 @@ const MDM_PRG_A0101000000 = () => {
                           name="" 
                           id="" 
                           className="sc-select"
-                          items={searchSelect}
+                          items={exSelect}
                           placeholder="Plant Code 선택"
                       />
                     </td>
@@ -242,7 +242,7 @@ const MDM_PRG_A0101000000 = () => {
                           name="" 
                           id="" 
                           className="sc-select"
-                          items={searchSelect}
+                          items={exSelect}
                           placeholder="Operation Code 선택"
                       />
                     </td>

@@ -38,7 +38,7 @@ ul, li, ol, li {list-style: none}
   width: 100%;
   height: calc(100vh - 162px);
   flex: 0 1 300px;
-  border-top-right-radius: 24px;
+  border-top-right-radius: 8px;
   /* background: linear-gradient(-45deg, rgba(5, 105, 122, 1), rgba(21, 155, 151, 1)); */  
   background: linear-gradient(135deg, #159B97 0%, #05697A 32.81%);
   position: relative;

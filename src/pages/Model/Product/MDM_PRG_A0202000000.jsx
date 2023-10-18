@@ -49,47 +49,84 @@ const MDM_PRG_A0202000000 = (props) => {
 
       <div className="grid-container">
 
-        <div className="grid-section">
-
-          <div className="grid-headline">
-
-            <div className="grid-top-buttons">
-              <Button>
-                SQL Viewer
-              </Button>
-              <Button>
-                엑셀 다운로드
-              </Button>
-            </div>
-
-          </div>
+        <div className="grid-section">     
 
           <div className="grid-area">
 
-            <div style={{ height: "600px", background: "#ddd" }}>그리드 영역</div>
+            <div style={{ height: "300px", background: "#ddd" }}>그리드 영역</div>
 
           </div>
 
           <div className="grid-bottom">
             <div className="grid-total">
               총 00개(현재페이지 0/전체페이지 000000)
-            </div>
-
-            <div className="grid-buttons">
-              <Button className="normal-button">등록</Button>
-              <Button className="normal-button">삭제</Button>
-              <Button className="normal-button" onClick={togglePopup}>저장</Button>
-              <Button className="confirm-button" onClick={togglePopup2}>확정</Button>
             </div>
           </div>
 
         </div>
 
-        <div className="grid-section">
+        <div className="grid-two-wrap">
+
+          <div className="grid-section">
+
+            <div class="grid-headline">
+                <div class="result-info">
+                  <span class="tit-icon"></span>
+                  <span class="title">법인정보</span>
+                </div>
+            </div>
+
+            <div className="grid-area">
+
+              <div style={{ height: "300px", background: "#ddd" }}>그리드 영역</div>
+
+            </div>
+
+            <div className="grid-bottom">
+              <div className="grid-total">
+                총 00개(현재페이지 0/전체페이지 000000)
+              </div>
+            </div>
+
+          </div>
+
+          <div className="grid-section">
+
+            <div class="grid-headline">
+                <div class="result-info">
+                  <span class="tit-icon"></span>
+                  <span class="title">Tech 정보</span>
+                </div>
+            </div>
+
+            <div className="grid-area">
+
+              <div style={{ height: "300px", background: "#ddd" }}>그리드 영역</div>
+
+            </div>
+
+            <div className="grid-bottom">
+              <div className="grid-total">
+                총 00개(현재페이지 0/전체페이지 000000)
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div className="grid-section">   
+
+          <div class="grid-headline">
+                <div class="result-info">
+                  <span class="tit-icon"></span>
+                  <span class="title">개발정보</span>
+                </div>
+            </div>  
 
           <div className="grid-area">
 
-            <div style={{ height: "600px", background: "#ddd" }}>그리드 영역</div>
+            <div style={{ height: "300px", background: "#ddd" }}>그리드 영역</div>
 
           </div>
 
@@ -97,15 +134,8 @@ const MDM_PRG_A0202000000 = (props) => {
             <div className="grid-total">
               총 00개(현재페이지 0/전체페이지 000000)
             </div>
-
-            <div className="grid-buttons">
-              <Button className="normal-button">등록</Button>
-              <Button className="normal-button">삭제</Button>
-              <Button className="normal-button" onClick={togglePopup}>저장</Button>
-              <Button className="confirm-button" onClick={togglePopup2}>확정</Button>
-            </div>
           </div>
-          
+
         </div>
 
       </div>

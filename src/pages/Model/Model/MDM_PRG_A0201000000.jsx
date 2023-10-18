@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { ReactComponent as Favorite } from "../../../image/favorite.svg";
 import "../../../assets/contents.css"
 import "../../../assets/modal.css"
+import { Split } from "@geoffcox/react-splitter";
 
 const MDM_PRG_A0201000000 = (props) => {
   const [isPopupVisible, setPopupVisibility] = useState(false);
@@ -47,65 +48,97 @@ const MDM_PRG_A0201000000 = (props) => {
         </ul>
       </div>
 
-      <div className="grid-container">
+      <div className="grid-container grid-split">
 
-        <div className="grid-section">
+        <Split          
+          initialPrimarySize="365px"
+          splitterSize='16px'
+          horizontal
+        >
 
-          <div className="grid-headline">
+          <div className="grid-section">
 
-            <div className="grid-top-buttons">
-              <Button>
-                SQL Viewer
-              </Button>
-              <Button>
-                엑셀 다운로드
-              </Button>
+            <div className="grid-area">
+
+              <div style={{ height: "300px", background: "#ddd" }}>그리드 영역</div>
+
+            </div>
+
+            <div className="grid-bottom">
+              <div className="grid-total">
+                총 00개(현재페이지 0/전체페이지 000000)
+              </div>
+
+              <div className="grid-buttons">              
+                <Button className="normal-button" onClick={togglePopup}>저장</Button>
+                <Button className="confirm-button" onClick={togglePopup2}>확정</Button>
+              </div>
             </div>
 
           </div>
 
-          <div className="grid-area">
+          <Split
+            initialPrimarySize='400px'
+            splitterSize='16px'
+            horizontal
+          >
+            <div className="grid-section">
+              <div className="grid-headline gh2">
 
-            <div style={{ height: "600px", background: "#ddd" }}>그리드 영역</div>
+                <div className="result-info">
+                  <span className="tit-icon"></span>
+                  <span className="title">Model Tracking</span>
+                </div>
+              </div>
 
-          </div>
+              <div className="grid-area">
 
-          <div className="grid-bottom">
-            <div className="grid-total">
-              총 00개(현재페이지 0/전체페이지 000000)
+                <div style={{ height: "300px", background: "#ddd" }}>그리드 영역</div>
+
+              </div>
+
+              <div className="grid-bottom">
+                <div className="grid-total">
+                  총 00개(현재페이지 0/전체페이지 000000)
+                </div>
+
+                <div className="grid-buttons">              
+                  <Button className="normal-button" onClick={togglePopup}>저장</Button>
+                  <Button className="confirm-button" onClick={togglePopup2}>확정</Button>
+                </div>
+              </div>
             </div>
 
-            <div className="grid-buttons">
-              <Button className="normal-button">등록</Button>
-              <Button className="normal-button">삭제</Button>
-              <Button className="normal-button" onClick={togglePopup}>저장</Button>
-              <Button className="confirm-button" onClick={togglePopup2}>확정</Button>
+            <div className="grid-section">
+
+              <div className="grid-headline gh2">
+
+                <div className="result-info">
+                  <span className="tit-icon"></span>
+                  <span className="title">Site Model</span>
+                </div>
+              </div>
+
+              <div className="grid-area">
+
+                <div style={{ height: "300px", background: "#ddd" }}>그리드 영역</div>
+
+              </div>
+
+              <div className="grid-bottom">
+                <div className="grid-total">
+                  총 00개(현재페이지 0/전체페이지 000000)
+                </div>
+
+                <div className="grid-buttons">              
+                  <Button className="normal-button" onClick={togglePopup}>저장</Button>
+                  <Button className="confirm-button" onClick={togglePopup2}>확정</Button>
+                </div>
+              </div>
             </div>
-          </div>
+          </Split>
 
-        </div>
-
-        <div className="grid-section">
-
-          <div className="grid-area">
-
-            <div style={{ height: "600px", background: "#ddd" }}>그리드 영역</div>
-
-          </div>
-
-          <div className="grid-bottom">
-            <div className="grid-total">
-              총 00개(현재페이지 0/전체페이지 000000)
-            </div>
-
-            <div className="grid-buttons">
-              <Button className="normal-button">등록</Button>
-              <Button className="normal-button">삭제</Button>
-              <Button className="normal-button" onClick={togglePopup}>저장</Button>
-              <Button className="confirm-button" onClick={togglePopup2}>확정</Button>
-            </div>
-          </div>
-        </div>
+        </Split>
 
       </div>
 
