@@ -23,7 +23,7 @@ const Gnb = ({ gnbFolding }) => {
                 <path d="M5.5293 6.66675L8.86263 10.1667L12.196 6.66675" stroke="black" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </div>
-            
+
             <div className="gl-hover">
               <div className="gl-lang active">
                 <img src={`${process.env.PUBLIC_URL}/assets/lang-korea.png`} alt="korea" />
@@ -32,7 +32,7 @@ const Gnb = ({ gnbFolding }) => {
                 <img src={`${process.env.PUBLIC_URL}/assets/lang-korea.png`} alt="korea" />
               </div>
             </div>
-            
+
           </div>
 
           <div className="gnb-user">
@@ -46,7 +46,7 @@ const Gnb = ({ gnbFolding }) => {
               </ul>
             </div>
           </div>
-          
+
           <div className="gnb-button">
             <button type="button" className="gnb-fold" onClick={gnbFolding}><img src={`${process.env.PUBLIC_URL}/assets/gnb-btn.png`} alt="gnb-btn" width="36" /></button>
           </div>
@@ -61,27 +61,27 @@ const Gnb = ({ gnbFolding }) => {
           {navItems && navItems.map((firstDepth, index) => (
             <div className="nav-item" key={`depth1-${index}`}>
               <NavLink to={firstDepth.path} className="nav-link">{firstDepth.title}</NavLink>
-                <div className="sub-depth-nav">
-                  {firstDepth.child_depth && firstDepth.child_depth.map((secondDepth, index) => (
-                    <div className="sub-depth2" key={`depth2-${index}`}>
-                      <h5 className="sd-tit">
-                        <NavLink to={secondDepth.path}>{secondDepth.title}</NavLink>
-                      </h5>
+              <div className="sub-depth-nav">
+                {firstDepth.child_depth && firstDepth.child_depth.map((secondDepth, index) => (
+                  <div className="sub-depth2" key={`depth2-${index}`}>
+                    <h5 className="sd-tit">
+                      <NavLink to={secondDepth.path}>{secondDepth.title}</NavLink>
+                    </h5>
 
-                      {secondDepth.child_depth.length !== 0
-                        ?
-                        <ul className="sub-depth3">
-                          {secondDepth.child_depth && secondDepth.child_depth.map((thirdDepth, index) => (
-                            <li key={`depth3-${index}`}>
-                              <NavLink to={thirdDepth.path} className="sub-link">{thirdDepth.title}</NavLink>
-                            </li>
-                          ))}
-                        </ul>
-                        : null
-                      }
-                    </div>
-                  ))}
-                </div>
+                    {secondDepth.child_depth.length !== 0
+                      ?
+                      <ul className="sub-depth3">
+                        {secondDepth.child_depth && secondDepth.child_depth.map((thirdDepth, index) => (
+                          <li key={`depth3-${index}`}>
+                            <NavLink to={thirdDepth.path} className="sub-link">{thirdDepth.title}</NavLink>
+                          </li>
+                        ))}
+                      </ul>
+                      : null
+                    }
+                  </div>
+                ))}
+              </div>
             </div>
           ))}
         </div>
