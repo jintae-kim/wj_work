@@ -54,6 +54,7 @@
     border-radius: 12px;
     transition: all 0.3s ease;
     margin-left:16px;
+    text-decoration: none;
 }
 
 .contents .grid-tab-box .grid-tab:first-child {

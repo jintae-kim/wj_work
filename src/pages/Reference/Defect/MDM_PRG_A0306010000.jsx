@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
-import { Button, Popup, SelectBox, TextBox } from "devextreme-react";
-import { Link } from "react-router-dom";
+import { Button, Popup, SelectBox, Tabs, TextBox } from "devextreme-react";
+import { Link, NavLink } from "react-router-dom";
 import { ReactComponent as Favorite } from "../../../image/favorite.svg";
 import "../../../assets/contents.css";
 import "../../../assets/modal.css";
@@ -9,7 +9,9 @@ import 'devextreme/dist/css/dx.common.css';
 import { Split } from "@geoffcox/react-splitter";
 import {ASIDE_A0306010000} from "../../../components/Include/AsideMenus";
 
+
 const MDM_PRG_A0306010000 = (props) => {
+
   const [isPopupVisible, setPopupVisibility] = useState(false);
 
   const togglePopup = () => {
@@ -35,26 +37,6 @@ const MDM_PRG_A0306010000 = (props) => {
   }
 
   const exSelect = ['All', 'EX']
-
-  //탭메뉴
-  const tabActive = () => {
-
-    const tabItem = document.querySelectorAll('.grid-tab');
-
-    tabItem.forEach((tab, idx)=> {    
-      tab.addEventListener('click', function(){        
-          tabItem.forEach((item)=> {
-              item.classList.remove('active');
-          });
-  
-          tabItem[idx].classList.add('active');  
-      });      
-    });
-  }
-
-  useEffect(() => {
-    tabActive();
-  }, []);
   
 
   return (
@@ -84,10 +66,11 @@ const MDM_PRG_A0306010000 = (props) => {
             </ul>
           </div>
 
-          <ul className="grid-tab-box">
-            <li className="grid-tab active">불량코드</li>
-            <li className="grid-tab">불량코드 그룹</li>
-          </ul>
+          <div className="grid-tab-box">
+            <NavLink to={'/reference/MDM_PRG_A0306010000'} className="grid-tab">불량코드</NavLink>
+            <NavLink to={'/reference/defect/code-group'} className="grid-tab">불량코드 그룹</NavLink>
+          </div>
+
 
           <div className="grid-container">
 
