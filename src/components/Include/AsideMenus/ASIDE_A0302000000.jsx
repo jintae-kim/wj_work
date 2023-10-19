@@ -37,6 +37,9 @@ export const ASIDE_A0302000000 = () => {
           </div>
         </div>
       </div>
+
+      <Button type="button" className="search-button" text="조회" />
+      
     </div>
   )
 }
