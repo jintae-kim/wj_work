@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
 import { Button, Popup } from "devextreme-react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { ReactComponent as Favorite } from "../../../image/favorite.svg";
 import "../../../assets/contents.css";
 import "../../../assets/modal.css";
@@ -76,10 +76,10 @@ const MDM_PRG_A0204010000 = (props) => {
             </ul>
           </div>
 
-          <ul className="grid-tab-box">
-            <li className="grid-tab active">BOM</li>
-            <li className="grid-tab">BOM Structure</li>
-          </ul>
+          <div className="grid-tab-box">
+            <NavLink to={'/model/MDM_PRG_A0204010000'} className="grid-tab active">BOM</NavLink>
+            <NavLink to={'/model/bom/bom-structure'} className="grid-tab">BOM Structure</NavLink>
+          </div>
 
           <div className="grid-container gird-flex">
 
