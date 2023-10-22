@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, {useState} from "react";
 import { Button, Popup, SelectBox, TextBox } from "devextreme-react";
 import {Link, NavLink} from "react-router-dom";
 import { ReactComponent as Favorite } from "../../../image/favorite.svg";
@@ -31,26 +31,6 @@ const MDM_PRG_A0306010000 = (props) => {
   }
 
   const exSelect = ['All', 'EX']
-
-  //탭메뉴
-  const tabActive = () => {
-
-    const tabItem = document.querySelectorAll('.grid-tab');
-
-    tabItem.forEach((tab, idx)=> {    
-      tab.addEventListener('click', function(){        
-          tabItem.forEach((item)=> {
-              item.classList.remove('active');
-          });
-  
-          tabItem[idx].classList.add('active');  
-      });      
-    });
-  }
-
-  useEffect(() => {
-    tabActive();
-  }, []);
   
 
   return (

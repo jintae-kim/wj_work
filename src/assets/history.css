@@ -75,6 +75,7 @@
     text-decoration: none;
     color:#aaa;
     font-size:16px;
+    font-weight: 500;
 }
 .history-stack .history-swiper .hs-cont .hs-link.active,
 .history-stack .history-swiper .hs-cont .hs-link:hover {
