@@ -125,6 +125,7 @@
 .aside-scroll .search-cate .sc-box .sc-cont .dx-field-value {
     float: none;
     width: 178px;
+    border-radius: 8px;
 }
 
 .aside-scroll .search-cate .sc-box .sc-cont .sc-select {
