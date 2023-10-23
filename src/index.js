@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import 'devextreme/dist/css/dx.light.css';
 import 'devextreme/dist/css/dx.common.css';
+import 'realgrid/dist/realgrid-style.css';
 import "./index.css";
 import "./assets/contents.css";
 import "./assets/modal.css";
