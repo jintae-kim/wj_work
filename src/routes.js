@@ -19,6 +19,8 @@ import {
   MDM_PRG_A0202000000
 } from "./pages/Model";
 import LayoutProvider from "./Layout"
+import { LoginPage } from "./pages/Login";
+
 
 const AppRoutes = () => {
   let element = useRoutes([
@@ -165,6 +167,7 @@ const AppRoutes = () => {
         },
       ]
     },
+    { path: "/login", element: <LoginPage title="Login" />},
     { path: "*",  element: <Notfound title="Notfound" /> }
   ]);
 
