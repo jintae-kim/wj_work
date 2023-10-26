@@ -1,31 +1,34 @@
 import { Button, TextBox } from "devextreme-react";
-import React, { useState } from "react";
-import {
-  Validator,
-  RequiredRule
-} from 'devextreme-react/validator';
+import React, { useRef, useState } from "react";
 
 const LoginPage = () => {
 
-  const [idVal, setIdVal] = useState('');
-  const [pwVal, setPwVal] = useState('');  
+  // const [idVal, setIdVal] = useState('');
+  // const [pwVal, setPwVal] = useState('');
+  const [isDisabled, setDisabled] = useState(true); 
 
-  const handleValueChange = (e) => {
-    const previousValue = e.previousValue;
-    const newValue = e.value;
+  const idInput = useRef();
+  const pwInput = useRef();  
 
-    setIdVal(newValue);    
+  // const handleValueChange = (e) => {
+  //   const previousValue = e.previousValue;
+  //   const newValue = e.value;
 
-    console.log(idVal);
-  }
+  //   setIdVal(newValue); 
+  // }
 
-  const handleValueChange2 = (e) => {
-    const previousValue = e.previousValue;
-    const newValue = e.value;
+  // const handleValueChange2 = (e) => {
+  //   const previousValue = e.previousValue;
+  //   const newValue = e.value;
 
-    setPwVal(newValue);    
+  //   setPwVal(newValue);
+  // }
 
-    console.log(pwVal);
+  const valueCheck = () => { 
+    const idVal = idInput.current._element.querySelector('.dx-texteditor-input').value;
+    const pwVal = pwInput.current._element.querySelector('.dx-texteditor-input').value;
+      
+    (!idVal == '' && !pwVal == '') ? setDisabled(false) : setDisabled(true);
   }
 
   return (
@@ -33,34 +36,32 @@ const LoginPage = () => {
 
       <div className="login-wrap">
         <h1 className="login-tit">LOGIN</h1>
-
+        
         <form action="">
-
           <TextBox            
             placeholder="ID" 
-            className="login-id"
-            isRequired={true} 
-            value={idVal}                           
-          >
-            <Validator>
-                <RequiredRule
-                  message="enter message" />
-            </Validator>
-          </TextBox>
+            className="login-id"            
+            value=""  
+            // onValueChanged={handleValueChange}
+            onKeyUp={valueCheck}
+            ref={idInput}
+          />
 
           <TextBox 
             mode="password"            
             placeholder="PWD" 
             className="login-pwd" 
-            value={pwVal}           
-            onValueChanged={handleValueChange2}
+            value=""           
+            // onValueChanged={handleValueChange2}
+            onKeyUp={valueCheck}
+            ref={pwInput}
           />
 
           <Button 
             type="submit" 
             text="Login"
-            className="login-btn" 
-                    
+            className="login-btn"
+            disabled={isDisabled}                     
           />
 
           <Button 
@@ -68,7 +69,6 @@ const LoginPage = () => {
             text="취 소" 
             className="cancel-btn"           
           />
-
         </form>
 
       </div>      
