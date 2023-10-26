@@ -10,23 +10,26 @@ const LoginPage = () => {
   const [idVal, setIdVal] = useState('');
   const [pwVal, setPwVal] = useState('');  
 
-  const handleValueChange = (e) => {
-    const previousValue = e.previousValue;
+  const handleIdChange = (e) => {
     const newValue = e.value;
-
-    setIdVal(newValue);    
-
+    setIdVal(newValue);
     console.log(idVal);
   }
 
-  const handleValueChange2 = (e) => {
-    const previousValue = e.previousValue;
+  const handlePasswordChange = (e) => {
     const newValue = e.value;
-
-    setPwVal(newValue);    
-
+    setPwVal(newValue);
     console.log(pwVal);
   }
+
+  const isLoginDisabled = idVal === '' || pwVal === '';
+
+  const handleLogin = () => {
+    if (!isLoginDisabled) {
+      // 로그인 로직을 이곳에 추가하십시오.
+
+    }
+  };
 
   return (
     <div className="login-page">
@@ -40,33 +43,42 @@ const LoginPage = () => {
             placeholder="ID" 
             className="login-id"
             isRequired={true} 
-            value={idVal}                           
+            value={idVal}
+            onValueChanged={handleIdChange}
           >
             <Validator>
                 <RequiredRule
-                  message="enter message" />
+                  message="아이디를 입력해주세요" />
             </Validator>
           </TextBox>
 
           <TextBox 
             mode="password"            
-            placeholder="PWD" 
-            className="login-pwd" 
+            placeholder="Password"
+            className="login-pwd"
+            isRequired={true}
             value={pwVal}           
-            onValueChanged={handleValueChange2}
-          />
+            onValueChanged={handlePasswordChange}
+          >
+            <Validator>
+              <RequiredRule
+                message="비밀번호를 입력해주세요" />
+            </Validator>
+          </TextBox>
 
           <Button 
             type="submit" 
             text="Login"
-            className="login-btn" 
-                    
+            className="login-btn"
+            onValueChanged={handlePasswordChange}
+            disabled={isLoginDisabled}
           />
 
           <Button 
             type="submit" 
             text="취 소" 
-            className="cancel-btn"           
+            className="cancel-btn"
+            onClick={handleLogin}
           />
 
         </form>
