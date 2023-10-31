@@ -319,3 +319,59 @@
 .dx-texteditor-input {
     width: 178px;
 }
+
+.login-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.login-page .login-wrap {
+    text-align: center;
+    width: 360px;
+}
+
+.login-page .login-wrap .login-tit {
+    font-size: 48px;
+    margin-bottom: 30px;
+}
+
+.login-page .login-wrap .dx-textbox.dx-editor-outlined {
+    border-color: #eee;
+    border-radius: 8px;
+}
+
+.login-page .login-wrap .dx-textbox .dx-texteditor-input {
+    padding: 12px 20px;
+}
+
+.login-page .login-wrap .dx-textbox.login-id {
+    margin-bottom: 20px;
+}
+
+.login-page .login-wrap .login-btn,
+.login-page .login-wrap .cancel-btn {
+    width: 100%;
+    display: block;
+}
+
+.login-page .login-wrap .login-btn {
+    margin:40px 0 20px;
+    background-color: #159B97;
+    border-color: #159B97;
+    color: #fff;
+    border-radius: 8px;
+    font-weight: 700;
+}
+
+.login-page .login-wrap .cancel-btn {
+    color: #000;
+    border: 1px solid #DDD;
+    background-color: #fff;
+    border-radius: 8px
+}
+
+.login-page .login-wrap .dx-button-content {
+    padding:12px 20px;
+}

@@ -6,6 +6,13 @@ import { MainNavItems } from "../Resources/MainNavItems";
 const Gnb = ({ gnbFolding }) => {
   const navItems = MainNavItems;
 
+  const handleLinkClick = (e) => {
+    if (e.currentTarget.classList.contains("disabled")) {
+      e.preventDefault();
+      alert("접근 권한이 없습니다.");
+    }
+  }
+
   return (
     <div className="gnb-wrapper">
       <div className="gnb-headline">
@@ -65,7 +72,7 @@ const Gnb = ({ gnbFolding }) => {
                 {firstDepth.child_depth && firstDepth.child_depth.map((secondDepth, index) => (
                   <div className="sub-depth2" key={`depth2-${index}`}>
                     <h5 className="sd-tit">
-                      <NavLink to={secondDepth.path}>{secondDepth.title}</NavLink>
+                      <NavLink to={secondDepth.path} onClick={handleLinkClick}>{secondDepth.title}</NavLink>
                     </h5>
 
                     {secondDepth.child_depth.length !== 0
@@ -73,7 +80,7 @@ const Gnb = ({ gnbFolding }) => {
                       <ul className="sub-depth3">
                         {secondDepth.child_depth && secondDepth.child_depth.map((thirdDepth, index) => (
                           <li key={`depth3-${index}`}>
-                            <NavLink to={thirdDepth.path} className="sub-link">{thirdDepth.title}</NavLink>
+                            <NavLink to={thirdDepth.path} className="sub-link" onClick={handleLinkClick}>{thirdDepth.title}</NavLink>
                           </li>
                         ))}
                       </ul>
@@ -84,6 +91,40 @@ const Gnb = ({ gnbFolding }) => {
               </div>
             </div>
           ))}
+
+          <div className="nav-item" >
+            <NavLink
+              to="#"
+              className="nav-link"
+            >
+              First Depth
+            </NavLink>
+            <div className="sub-depth-nav">
+              <div className="sub-depth2">
+                <h5 className="sd-tit">
+                  <NavLink
+                    to="/model/MDM_PRG_A0201000000"
+                    className="disabled"
+                    onClick={handleLinkClick}
+                  >
+                    Second Depth
+                  </NavLink>
+                </h5>
+              </div>
+
+              <div className="sub-depth2">
+                <h5 className="sd-tit">
+                  <NavLink to="/model/MDM_PRG_A0201000000" className="disabled" onClick={handleLinkClick}>Second Depth</NavLink>
+                </h5>
+                <ul className="sub-depth3">
+                  <li>
+                    <NavLink to="/model/MDM_PRG_A0201000000" className="sub-link disabled" onClick={handleLinkClick}>Third Depth</NavLink>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
