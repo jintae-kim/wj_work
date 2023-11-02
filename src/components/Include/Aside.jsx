@@ -64,6 +64,10 @@ const Aside = () => {
     document.querySelector('.split-container').style.cssText = '--react-split-min-primary: 20px; --react-split-min-secondary: calc(100% - 300px); --react-split-primary: 0px; --react-split-splitter: 5px';
   }
 
+  const openAside = () => {
+    document.querySelector('.split-container').style.cssText = '--react-split-min-primary: 20px; --react-split-min-secondary: calc(100% - 300px); --react-split-primary: 30%; --react-split-splitter: 5px';
+  }
+
   return (
     <div className="aside-scroll">
 
