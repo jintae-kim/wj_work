@@ -1,7 +1,9 @@
 import { RadioGroup, SelectBox, TextBox } from "devextreme-react";
 import "../../../assets/aside.css";
 import { ReactComponent as Close } from "../../../image/close.svg";
+import { ReactComponent as Open } from "../../../image/aside_open.svg";
 import { Button } from "devextreme-react";
+
 
 export const ASIDE_A0105000000 = () => {
 
@@ -33,7 +35,7 @@ export const ASIDE_A0105000000 = () => {
       </span>
 
       <span className="as-open" onClick={openAside}>
-        O
+        <Open/>
       </span>
 
       <div className="search-cate">

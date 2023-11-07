@@ -1,6 +1,7 @@
 import { RadioGroup, TextBox } from "devextreme-react";
 import "../../../assets/aside.css";
 import { ReactComponent as Close } from "../../../image/close.svg";
+import { ReactComponent as Open } from "../../../image/aside_open.svg";
 import { Button } from "devextreme-react";
 
 export const ASIDE_A0306020000 = () => {
@@ -10,6 +11,10 @@ export const ASIDE_A0306020000 = () => {
 
   const closeAside = () => {
     document.querySelector('.split-container').style.cssText = '--react-split-min-primary: 20px; --react-split-min-secondary: calc(100% - 300px); --react-split-primary: 0px; --react-split-splitter: 5px';
+  }
+
+  const openAside = () => {
+    document.querySelector('.split-container').style.cssText = '--react-split-min-primary: 20px; --react-split-min-secondary: calc(100% - 300px); --react-split-primary: 30%; --react-split-splitter: 5px';
   }
 
     return (
@@ -24,8 +29,12 @@ export const ASIDE_A0306020000 = () => {
         </div>
 
         <span className="as-close" onClick={closeAside}>
-        <Close/>
-      </span>
+          <Close/>
+        </span>
+
+        <span className="as-open" onClick={openAside}>
+          <Open/>
+        </span>
 
         <div className="search-cate">
 

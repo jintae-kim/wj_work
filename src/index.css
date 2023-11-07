@@ -79,8 +79,8 @@ ul, li, ol, li {list-style: none}
 }
 
 .aside-section .aside-hidden .as-open {
-  left:20px;
-  z-index: 1;
+  left:6px;
+  z-index: 99;
 }
 
 

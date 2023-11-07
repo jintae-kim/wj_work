@@ -31,10 +31,20 @@ const MDM_PRG_A0308010000 = (props) => {
   }
 
   const exSelect = ['All', 'EX']
+
+  const checkSplit = (sizes: SplitMeasuredPixelSizes) => {
+    
+    if(sizes.primary == '20') {
+      document.querySelector('.aside-scroll').classList.add('aside-hidden');
+    }else {
+      document.querySelector('.aside-scroll').classList.remove('aside-hidden');
+    }
+    
+  }
   
 
   return (
-    <Split initialPrimarySize='300px' minPrimarySize='20px' minSecondarySize='calc(100% - 300px)' splitterSize='5px' vertical>
+    <Split initialPrimarySize='300px' minPrimarySize='20px' minSecondarySize='calc(100% - 300px)' splitterSize='5px' onMeasuredSizesChanged={checkSplit} vertical>
       <div className="aside-section">
         <ASIDE_A0308010000 />
       </div>
