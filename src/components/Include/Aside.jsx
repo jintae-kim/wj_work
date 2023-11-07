@@ -14,6 +14,7 @@ import {
 
 } from "./AsideMenus";
 import { ReactComponent as Close } from "../../image/close.svg";
+import { ReactComponent as Open } from "../../image/aside_open.svg";
 import { useLocation } from "react-router-dom";
 import { Button } from "devextreme-react";
 
@@ -81,6 +82,10 @@ const Aside = () => {
 
       <span className="as-close" onClick={closeAside}>
         <Close/>
+      </span>
+
+      <span className="as-open" onClick={openAside}>
+        <Open/>
       </span>
 
       {leftPanel}

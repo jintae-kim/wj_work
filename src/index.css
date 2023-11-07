@@ -78,6 +78,10 @@ ul, li, ol, li {list-style: none}
   transition: all 0.3s ease;
 }
 
+.aside-section .as-open svg path:first-child {
+  fill:#159593;
+}
+
 .aside-section .aside-hidden .as-open {
   left:6px;
   z-index: 99;
