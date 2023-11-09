@@ -121,7 +121,9 @@ export const ASIDE_A0203000000 = () => {
 
       </div>
 
-      <Button type="button" className="search-button" text="조회" />
+      <div className="search-button-wrap">
+        <Button type="button" className="search-button" text="조회" />
+      </div>
 
     </div>
   )

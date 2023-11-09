@@ -1,4 +1,4 @@
-import { SelectBox, RadioGroup } from "devextreme-react"
+import { SelectBox, RadioGroup, Button } from "devextreme-react"
 
 export const ASIDE_A0103000000 = () => {
 
@@ -72,6 +72,10 @@ export const ASIDE_A0103000000 = () => {
                 <div className="sc-cont">
                     <RadioGroup className="radio-group" items={searchConfirm} defaultValue={searchConfirm[0]} />
                 </div>
+            </div>
+
+            <div className="search-button-wrap">
+                <Button type="button" className="search-button" text="조회" />
             </div>
 
         </div>

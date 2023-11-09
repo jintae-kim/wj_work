@@ -199,7 +199,7 @@
     margin: 0 15px;
     padding: 0 0 0 0;
     line-height: 32px;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 700;
     color: #ddd;
     border-bottom:2px solid transparent;
@@ -236,7 +236,7 @@
     border-top:2px solid #159B97;
     top:48px;
     left:0;
-    padding: 40px 40px 40px 118px;
+    padding: 40px 40px 40px;
     box-sizing: border-box;
     z-index: 1502;
 }
@@ -255,7 +255,7 @@
 
 .main-navigation .nav .nav-item .sub-depth-nav .sub-depth2 .sd-tit,
 .main-navigation .nav .nav-item .sub-depth-nav .sub-depth2 .sd-tit a {
-    font-size:20px;
+    font-size:18px;
     color:#000;
     font-weight: 700;
     line-height:32px;
@@ -271,13 +271,13 @@
     border-left: 1px solid #dddddd;
 }
 .main-navigation .nav .nav-item .sub-depth-nav .sub-depth2 .sub-depth3 {
-    padding-top: 20px;
+    padding-top: 10px;
 }
 
 .main-navigation .nav .nav-item .sub-depth-nav .sub-depth2 .sub-link {
     display: block;
-    font-size:16px;
-    line-height:32px;
+    font-size:14px;
+    line-height:24px;
     color:#777;
     text-decoration: none;
 }
