@@ -14,6 +14,7 @@ import {
 
 } from "./AsideMenus";
 import { ReactComponent as Close } from "../../image/close.svg";
+import { ReactComponent as Open } from "../../image/aside_open.svg";
 import { useLocation } from "react-router-dom";
 import { Button } from "devextreme-react";
 
@@ -64,6 +65,10 @@ const Aside = () => {
     document.querySelector('.split-container').style.cssText = '--react-split-min-primary: 20px; --react-split-min-secondary: calc(100% - 300px); --react-split-primary: 0px; --react-split-splitter: 5px';
   }
 
+  const openAside = () => {
+    document.querySelector('.split-container').style.cssText = '--react-split-min-primary: 20px; --react-split-min-secondary: calc(100% - 300px); --react-split-primary: 30%; --react-split-splitter: 5px';
+  }
+
   return (
     <div className="aside-scroll">
 
@@ -79,9 +84,15 @@ const Aside = () => {
         <Close/>
       </span>
 
+      <span className="as-open" onClick={openAside}>
+        <Open/>
+      </span>
+
       {leftPanel}
 
-      <Button type="button" className="search-button" text="조회" />
+      <div className="search-button-wrap">
+        <Button type="button" className="search-button" text="조회" />
+      </div>
       
     </div>
   )

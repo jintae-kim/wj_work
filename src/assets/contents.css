@@ -15,7 +15,7 @@
 }
 
 .contents .page-header > h2 {
-    font-size:30px;
+    font-size:24px;
     font-weight: 700;
     line-height:32px;
     color:#000;
@@ -28,6 +28,11 @@
 .contents .page-header > h2 .favorite-icon {
     margin-right: 8px;
     cursor: pointer;
+}
+
+.contents .page-header > h2 .favorite-icon svg {
+    width: 20px;
+    height: 20px;
 }
 
 .contents .page-header > h2 .favorite-icon svg path {
@@ -46,11 +51,11 @@
 
 .contents .grid-tab-box .grid-tab {
     cursor: pointer;
-    font-size:16px;
+    font-size:14px;
     font-weight: 500;
     color:#aaa;
     line-height:24px;
-    padding:5px 12px;
+    padding:4px 12px;
     border-radius: 12px;
     transition: all 0.3s ease;
     margin-left:16px;
@@ -259,7 +264,7 @@
 }
 
 .grid-buttons .dx-button.confirm-button {
-    background-color:#159B97;
+    background-color:#777;
 }
 
 .grid-buttons .dx-button.dx-state-hover {
@@ -277,14 +282,6 @@
     color:#fff;
 }
 
-.grid-buttons .confirm-button.dx-state-hover {
-    background-color:#05697A;
-}
-
-.grid-buttons .confirm-button.dx-state-focused {
-    font-weight: 700;
-    background-color: #159B97;
-}
 
 .grid-block-1 {
     height: calc(100% - 70px);
